@@ -2,7 +2,8 @@
   "scripts": {
     "dev": "retro dev",
     "build": "retro build",
-    "serve": "retro serve"
+    "serve": "retro serve",
+    "start": "retro dev"
   },
   "dependencies": {
     "react": "^17.0.2",
