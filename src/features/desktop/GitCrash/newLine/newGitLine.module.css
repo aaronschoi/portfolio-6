@@ -1,0 +1,29 @@
+.new-git-line-computer-name {
+    color: lime;
+}
+
+.new-git-line-system-label {
+    color: magenta;
+}
+
+.new-git-line-path {
+    color: yellow;
+}
+
+.new-git-line-branch {
+    color: cyan;
+}
+
+.new-git-line-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-git-line-title {
+    display: flex;
+    gap: 1em;
+}
+
+.new-git-line-command {
+    color: white;
+}

@@ -1,11 +1,2 @@
-:root {
-	--background: black;
-	--text-color: white;
-}
 
-.App {
-	background-color: var(--background);
-	color: var(--text-color);
-	height: 100vh;
-}
 

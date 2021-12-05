@@ -1,0 +1,16 @@
+.basic-application-container {
+    display: flex;
+    flex-direction: column;
+    height: 66vh;
+    width: 66vw;
+}
+
+.basic-application-topbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basic-application-topbar-sub-container {
+    display: flex;
+    gap: .5em;
+}
