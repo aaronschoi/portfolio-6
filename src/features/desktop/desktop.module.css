@@ -1,0 +1,8 @@
+.desktop-container {
+	background-image: url("http://localhost:8000/www/genericBackground.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}

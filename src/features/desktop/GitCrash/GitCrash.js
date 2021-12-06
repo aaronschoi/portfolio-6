@@ -6,7 +6,8 @@ const GitCrash = () => {
     return (
         <BasicApplication>
             <div className="gitCrash-container">
-                <NewGitLine />
+                <NewGitLine command="cd extraPretentious/Portfolio"/>
+                <NewGitLine path="c/extraPretentious/Portfolio" command="code ." branch="(main)" />
             </div>
         </BasicApplication>
     )

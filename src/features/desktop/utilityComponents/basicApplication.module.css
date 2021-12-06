@@ -1,16 +1,32 @@
 .basic-application-container {
-    display: flex;
-    flex-direction: column;
-    height: 66vh;
-    width: 66vw;
+	display: flex;
+	flex-direction: column;
+	height: 66vh;
+	width: 66vw;
+    /* border: 1px solid lightgray; */
+    border-radius: 10px;
 }
 
 .basic-application-topbar {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+	background-color: white;
+	border-radius: 10px 10px 0 0;
 }
 
 .basic-application-topbar-sub-container {
-    display: flex;
-    gap: .5em;
+	display: flex;
+}
+
+.basic-application-button, .basic-application-exit {
+    padding: .5em;
+}
+
+.basic-application-button:hover {
+	background-color: lightgray;
+}
+
+.basic-application-exit:hover {
+	background-color: red;
+    border-radius: 0 10px 0 0;
 }

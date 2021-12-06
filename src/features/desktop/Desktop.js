@@ -1,5 +1,7 @@
 import RecycleBin from "./files/recycleBin/RecycleBin";
 import GitCrash from "./GitCrash/GitCrash";
+import "./desktop.module.css"
+import Taskbar from "./taskbar/Taskbar";
 
 const Desktop = () => {
 	//GitCrash
@@ -8,16 +10,17 @@ const Desktop = () => {
 	return (
 		<>
 			{/* desktop container */}
-			<div>
+			<div className="desktop-container">
 				{/* GitCrash Container to position the icon */}
 				<div>
 					<GitCrash />
+					<div>
 					<RecycleBin />
-					<div></div>
+					</div>
 				</div>
 			</div>
 			{/* Taskbar */}
-			<div>{/*windows 11 icons... link to github, linkedin, etc */}</div>
+			<Taskbar />
 		</>
 	);
 };

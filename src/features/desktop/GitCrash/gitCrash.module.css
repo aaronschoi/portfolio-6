@@ -1,3 +1,7 @@
 .gitCrash-container {
-    background: black;
+	background: black;
+	height: 100%;
+	overflow:hidden;
+	border-radius: 0 0 10px 10px;
+    border: 1px solid lightgray;
 }
