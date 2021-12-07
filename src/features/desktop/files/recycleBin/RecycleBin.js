@@ -20,12 +20,12 @@ const RecycleBin = () => {
 	const open = (
 		<div>
 			{testData.map((data) => (
-				<TrashFiles icon={data.icon} fileName={data.fileName} />
+				<TrashFiles key={data.icon + data.fileName} icon={data.icon} fileName={data.fileName} />
 			))}
 		</div>
 	);
 
-	const icon = <img src="https://dummyimage.com/250/ffffff/123456" />;
+	const icon = <img src="https://dummyimage.com/50/ffffff/123456" />;
 
 	return <>{fileOpen ? open : icon}</>;
 };

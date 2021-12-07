@@ -14,13 +14,10 @@ const Desktop = () => {
 				{/* GitCrash Container to position the icon */}
 				<div>
 					<GitCrash />
-					<div>
 					<RecycleBin />
-					</div>
 				</div>
+				<Taskbar />
 			</div>
-			{/* Taskbar */}
-			<Taskbar />
 		</>
 	);
 };

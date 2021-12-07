@@ -1,0 +1,47 @@
+:root {
+    --taskbar-bg: #ccd1d9;
+    --taskbar-hover: #e6e7e8;
+}
+
+.taskbar-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--taskbar-bg);
+    opacity: 0.93;
+}
+
+.taskbar-programs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar-programs-gap {
+    gap: .5em;
+}
+
+.taskbar-settings {
+    gap: .5em;
+}
+
+.taskbar-right {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.taskbar-right-icon {
+    height: 80%;
+    border-radius: 10px;
+}
+
+.taskbar-caret {
+    height: 100%;
+}
+
+.taskbar-right-icon, .taskbar-caret {
+    padding: 0 .5em;
+}
+
+.taskbar-right-icon:hover, .taskbar-caret:hover {
+    background-color: var(--taskbar-hover);
+}
