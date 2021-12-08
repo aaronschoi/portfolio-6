@@ -25,15 +25,21 @@ const GitCrash = () => {
 		if (event.keyCode === 8) {
 			setLetter((current) => current - 1);
 		} else if (event.keyCode === 13) {
+			if(currentLine === 2) {
+				{/* open bsCODe */}
+			}
+			else {
 			setCurrentLine((current) => current + 1);
 			setLetter(0);
+			}
+			
 		} else {
 			setLetter((current) => current + 1);
 		}
 	};
 
 	return (
-		<BasicApplication className="draggable resizable resize-drag">
+		<BasicApplication className="resize-drag">
 			<div
 				className="gitCrash-container"
 				tabIndex="0"
