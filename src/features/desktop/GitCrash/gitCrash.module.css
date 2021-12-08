@@ -5,3 +5,8 @@
 	border-radius: 0 0 10px 10px;
     border: 1px solid lightgray;
 }
+
+.white {
+	color: white;
+	font-size: 50px;
+}

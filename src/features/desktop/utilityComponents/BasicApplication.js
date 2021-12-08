@@ -1,57 +1,51 @@
 import "./basicApplication.module.css";
 
 const BasicApplication = ({ className, children }) => {
-
-	const [ startingPosition, setStartingPosition ] = React.useState({
-		x: 0,
-		y: 0
-	})
-
 	React.useEffect(() => {
-		if (className) {
-			const position = { x: startingPosition.x, y: startingPosition.y };
+		if(className){
+		function dragMoveListener(event) {
+			var target = event.target,
+				// keep the dragged position in the data-x/data-y attributes
+				x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx,
+				y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
 
-			interact(".draggable").styleCursor(false);
-			interact(".draggable").draggable({
-				ignoreFrom: ".gitCrash-container",
-				listeners: {
-					// start(event) {
-					// 	console.log(event.type, event.target);
-					// },
-					move(event) {
-						position.x += event.dx;
-						position.y += event.dy;
+			// translate the element
+			target.style.webkitTransform = target.style.transform =
+				"translate(" + x + "px, " + y + "px)";
 
-						event.target.style.transform = `translate(${position.x}px, ${position.y}px)`;
-					},
+			// update the posiion attributes
+			target.setAttribute("data-x", x);
+			target.setAttribute("data-y", y);
+		}
+		interact(".resize-drag")
+			.draggable({
+				onmove: dragMoveListener,
+				cursorChecker() {
+					return null;
 				},
-			});
+			})
+			.resizable({
+				preserveAspectRatio: false,
+				edges: { left: true, right: true, bottom: true, top: true },
+			})
+			.on("resizemove", function (event) {
+				var target = event.target,
+					x = parseFloat(target.getAttribute("data-x")) || 0,
+					y = parseFloat(target.getAttribute("data-y")) || 0;
 
-			interact(".resizable").resizable({
-				edges: { top: true, left: true, bottom: true, right: true },
-				modifiers: [
-					interact.modifiers.restrictSize({ max: '.desktop-top-fixer' }),
-				  ],
-				listeners: {
-					move: function (event) {
-						let x = position.x
-						let y = position.y
+				// update the element's style
+				target.style.width = event.rect.width + "px";
+				target.style.height = event.rect.height + "px";
 
-						x = (parseFloat(x) || 0) + event.deltaRect.left;
-						y = (parseFloat(y) || 0) + event.deltaRect.top;
-						console.log(event)
-						Object.assign(event.target.style, {
-							width: `${event.rect.width}px`,
-							height: `${event.rect.height}px`,
-							transform: `translate(${y}px, ${x}px)`,
-							//transformOrigin: "bottom right"
-						});
+				// translate when resizing from top or left edges
+				x += event.deltaRect.left;
+				y += event.deltaRect.top;
 
-						//Object.assign(event.target.dataset, { x, y });
-						setStartingPosition({ x, y })
+				target.style.webkitTransform = target.style.transform =
+					"translate(" + x + "px," + y + "px)";
 
-					},
-				},
+				target.setAttribute("data-x", x);
+				target.setAttribute("data-y", y);
 			});
 		}
 	}, []);

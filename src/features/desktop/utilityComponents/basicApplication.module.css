@@ -3,8 +3,13 @@
 	flex-direction: column;
 	height: 66vh;
 	width: 66vw;
-    border-radius: 10px;
-	position:fixed;
+	border-radius: 10px;
+	position: fixed;
+	box-shadow:  2.5px 1px 1px rgba(0,0,0,0.12), 
+	2.5px 2px 2px rgba(0,0,0,0.12), 
+	2.5px 4px 4px rgba(0,0,0,0.12), 
+	2.5px 8px 10px rgba(0,0,0,0.12),
+	2.5px 16px 18px rgba(0,0,0,0.12);
 }
 
 .basic-application-topbar {
@@ -18,8 +23,9 @@
 	display: flex;
 }
 
-.basic-application-button, .basic-application-exit {
-    padding: .5em;
+.basic-application-button,
+.basic-application-exit {
+	padding: 0.5em;
 }
 
 .basic-application-button:hover {
@@ -28,5 +34,5 @@
 
 .basic-application-exit:hover {
 	background-color: red;
-    border-radius: 0 10px 0 0;
+	border-radius: 0 10px 0 0;
 }

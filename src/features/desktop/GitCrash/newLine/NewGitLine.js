@@ -1,6 +1,6 @@
 import "./newGitLine.module.css";
 
-const NewGitLine = ({ path = "/c", command = "", branch = "" }) => {
+const NewGitLine = ({ path, command, branch }) => {
 	return (
 		<div className="new-git-line-container">
 			<div className="new-git-line-title">
