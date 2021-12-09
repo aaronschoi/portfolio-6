@@ -35,3 +35,5 @@ const BSCodeExplorerBar = () => {
         </div>
     )
 }
+
+export default BSCodeExplorerBar;

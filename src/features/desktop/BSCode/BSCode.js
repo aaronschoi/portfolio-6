@@ -1,7 +1,12 @@
+import BSCodeContainer from "./container/BSCodeContainer"
+import Main from "./mainContent/Main";
+
 const BSCode = () => {
     return (
-        <div>
-            {/* container */}
-        </div>
+        <BSCodeContainer>
+            <Main />
+        </BSCodeContainer>
     )
 }
+
+export default BSCode;

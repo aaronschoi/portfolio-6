@@ -23,3 +23,5 @@ const BSCodeTopBar = () => {
         </div>
     )
 }
+
+export default BSCodeTopBar;
