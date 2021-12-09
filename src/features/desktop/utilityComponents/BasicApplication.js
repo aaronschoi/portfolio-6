@@ -2,7 +2,6 @@ import "./basicApplication.module.css";
 
 const BasicApplication = ({ className, children }) => {
 	React.useEffect(() => {
-		if(className){
 		function dragMoveListener(event) {
 			var target = event.target,
 				// keep the dragged position in the data-x/data-y attributes
@@ -47,7 +46,6 @@ const BasicApplication = ({ className, children }) => {
 				target.setAttribute("data-x", x);
 				target.setAttribute("data-y", y);
 			});
-		}
 	}, []);
 
 	return (
