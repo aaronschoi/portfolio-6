@@ -1,0 +1,66 @@
+import { createStore } from "@zaydek/retro/store";
+
+const initialWindowStates = {
+	linkedin: {
+		minimized: false,
+		open: false,
+	},
+	github: {
+		minimized: false,
+		open: false,
+	},
+	resume: {
+		minimized: false,
+		open: false,
+	},
+	gitcrash: {
+		minimized: false,
+		open: false,
+	},
+	bscode: {
+		minimized: false,
+		open: false,
+	},
+};
+
+export const windowStates = createStore(initialWindowStates);
+
+export const minimize = (winStr) => {
+	windowStates.set(state => ({
+		...state,
+		[winStr] : {
+			...state[winStr],
+			minimized: true
+		}
+	}))
+}
+
+export const maximize = (winStr) => {
+	windowStates.set(state => ({
+		...state,
+		[winStr] : {
+			...state[winStr],
+			minimized: false
+		}
+	}))
+}
+
+export const open = (winStr) => {
+	store.set(state => ({
+		...state,
+		[winStr] : {
+			...state[winStr],
+			open: true
+		}
+	}))
+}
+
+export const close = (winStr) => {
+	store.set(state => ({
+		...state,
+		[winStr] : {
+			...state[winStr],
+			open: false
+		}
+	}))
+}

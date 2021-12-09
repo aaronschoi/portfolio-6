@@ -1,0 +1,11 @@
+.redbar {
+    background: red;
+    width: 10px;
+    height: 2px;
+}
+
+.greybar {
+    background: grey;
+    width: 10px;
+    height: 2px;
+}
