@@ -1,11 +1,41 @@
+.prevent-select {
+    user-select: none;
+}
+
+.minicon-bar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 .redbar {
-    background: red;
-    width: 10px;
-    height: 2px;
+    background: rgb(218, 44, 0);
+    width: 33%;
+    height: 3px;
+    transition: width .25s ease;
+    border-radius: 25%;
 }
 
 .greybar {
     background: grey;
-    width: 10px;
-    height: 2px;
+    width: 10%;
+    height: 3px;
+    transition: width .25s ease;
+    border-radius: 25%;
+}
+
+.nobar {
+    width: 0%;
+    height: 0%;
+    transition: width .25s ease height .25s ease;
+    color:rgb(218, 44, 0)
+}
+
+.minicon {
+    display: grid;
+    grid-template-rows: .1fr 1fr .1fr;
+}
+
+.minicon-selected {
+        background-color: var(--taskbar-hover)
 }

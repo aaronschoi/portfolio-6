@@ -1,14 +1,16 @@
 import TimeAndDate from "./timeAndDate/TimeAndDate";
 import "./taskbar.module.css";
 import MinIcon from "./icons/MinIcon";
+import { windowStates } from "../../../store/windowStatesStore";
 
 const Taskbar = () => {
+
+	const openOrNah = windowStates.use(store => store)
 
 	return (
 		<div className="taskbar-container">
 			<div></div>
 			<div className="taskbar-programs taskbar-programs-gap">
-				{/*YO YOU SHOULD MAKE YOUR OWN PAGES FOR THESE LOL*/}
 				<MinIcon icon="LinkedIn" value="linkedin" />
 				<MinIcon icon="GitHub" value="github" />
 				<MinIcon icon="Resume" value="resume" />

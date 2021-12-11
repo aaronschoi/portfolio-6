@@ -1,29 +1,47 @@
 import {
 	windowStates,
 	minimize,
-	maximize,
+	unminimize,
+	open,
 } from "../../../../store/windowStatesStore";
 import "./minIcon.module.css";
 
 const MinIcon = ({ icon, value }) => {
 	const minStates = windowStates.use((store) => store);
 
-	const minMaxHandler = (event) => {
-		if (minStates[value].minimized === true) {
-			maximize(event.target.getAttribute("value"));
+	const mmocHandler = (event) => {
+		if (minStates[value].open) {
+			if (minStates[value].minimized) {
+				unminimize(value);
+			} else {
+				minimize(value);
+			}
 		} else {
-			minimize(event.target.getAttribute("value"));
+			open(value);
 		}
 	};
 
+	const botBar = minStates[value].open
+		? minStates[value].minimized
+			? "greybar"
+			: "redbar"
+		: "nobar";
+
 	return (
 		<div
-			className="taskbar-programs taskbar-right-icon"
+			className={`taskbar-programs taskbar-right-icon minicon ${
+				minStates[value].open ? "minicon-selected" : ""
+			}`}
 			value={value}
-			onClick={minMaxHandler}
+			onClick={mmocHandler}
 		>
-			<div value={value}>{icon}</div>
-			<div className={minStates[value].minimized ? "greybar" : "redbar"}></div>
+			<div></div>
+			<div value={value} className="prevent-select">
+				{icon}
+			</div>
+			<div className="minicon-bar">
+				<div className={botBar}></div>
+			</div>
 		</div>
 	);
 };

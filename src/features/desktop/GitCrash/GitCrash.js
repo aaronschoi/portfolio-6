@@ -33,7 +33,7 @@ const GitCrash = () => {
 	};
 
 	return (
-		<BasicApplication className="resize-drag">
+		<BasicApplication className="resize-drag" title="GitCrash" target="gitcrash">
 			<div
 				className="gitCrash-container"
 				tabIndex="0"

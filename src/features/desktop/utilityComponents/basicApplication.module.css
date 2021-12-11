@@ -5,11 +5,9 @@
 	width: 66vw;
 	border-radius: 10px;
 	position: fixed;
-	box-shadow:  2.5px 1px 1px rgba(0,0,0,0.12), 
-	2.5px 2px 2px rgba(0,0,0,0.12), 
-	2.5px 4px 4px rgba(0,0,0,0.12), 
-	2.5px 8px 10px rgba(0,0,0,0.12),
-	2.5px 16px 18px rgba(0,0,0,0.12);
+	box-shadow: 2.5px 1px 1px rgba(0, 0, 0, 0.12),
+		2.5px 2px 2px rgba(0, 0, 0, 0.12), 2.5px 4px 4px rgba(0, 0, 0, 0.12),
+		2.5px 8px 10px rgba(0, 0, 0, 0.12), 2.5px 16px 18px rgba(0, 0, 0, 0.12);
 }
 
 .basic-application-topbar {
@@ -30,9 +28,15 @@
 
 .basic-application-button:hover {
 	background-color: lightgray;
+	cursor: default;
 }
 
 .basic-application-exit:hover {
 	background-color: red;
 	border-radius: 0 10px 0 0;
+	cursor: default;
+}
+
+.hide-app {
+	visibility: hidden;
 }

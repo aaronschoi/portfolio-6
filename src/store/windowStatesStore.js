@@ -3,23 +3,23 @@ import { createStore } from "@zaydek/retro/store";
 const initialWindowStates = {
 	linkedin: {
 		minimized: false,
-		open: false,
+		open: false
 	},
 	github: {
 		minimized: false,
-		open: false,
+		open: false
 	},
 	resume: {
 		minimized: false,
-		open: false,
+		open: false
 	},
 	gitcrash: {
 		minimized: false,
-		open: false,
+		open: false
 	},
 	bscode: {
 		minimized: false,
-		open: false,
+		open: false
 	},
 };
 
@@ -35,7 +35,7 @@ export const minimize = (winStr) => {
 	}))
 }
 
-export const maximize = (winStr) => {
+export const unminimize = (winStr) => {
 	windowStates.set(state => ({
 		...state,
 		[winStr] : {
@@ -46,7 +46,7 @@ export const maximize = (winStr) => {
 }
 
 export const open = (winStr) => {
-	store.set(state => ({
+	windowStates.set(state => ({
 		...state,
 		[winStr] : {
 			...state[winStr],
@@ -56,7 +56,7 @@ export const open = (winStr) => {
 }
 
 export const close = (winStr) => {
-	store.set(state => ({
+	windowStates.set(state => ({
 		...state,
 		[winStr] : {
 			...state[winStr],

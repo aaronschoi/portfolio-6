@@ -1,12 +1,17 @@
+import { close, windowStates, minimize } from "../../../store/windowStatesStore";
 import "./basicApplication.module.css";
 
-const BasicApplication = ({ className, children }) => {
+const BasicApplication = ({ className, children, title, target }) => {
+	const winState = windowStates.use();
+
 	React.useEffect(() => {
 		function dragMoveListener(event) {
-			var target = event.target,
-				// keep the dragged position in the data-x/data-y attributes
-				x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx,
-				y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+			const target = event.target;
+			// keep the dragged position in the data-x/data-y attributes
+			let x =
+				(parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
+			let y =
+				(parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
 
 			// translate the element
 			target.style.webkitTransform = target.style.transform =
@@ -16,21 +21,10 @@ const BasicApplication = ({ className, children }) => {
 			target.setAttribute("data-x", x);
 			target.setAttribute("data-y", y);
 		}
-		interact(".resize-drag")
-			.draggable({
-				onmove: dragMoveListener,
-				cursorChecker() {
-					return null;
-				},
-			})
-			.resizable({
-				preserveAspectRatio: false,
-				edges: { left: true, right: true, bottom: true, top: true },
-			})
-			.on("resizemove", function (event) {
-				var target = event.target,
-					x = parseFloat(target.getAttribute("data-x")) || 0,
-					y = parseFloat(target.getAttribute("data-y")) || 0;
+		function resizeDrag(event){
+			const target = event.target;
+				let x = parseFloat(target.getAttribute("data-x")) || 0;
+				let y = parseFloat(target.getAttribute("data-y")) || 0;
 
 				// update the element's style
 				target.style.width = event.rect.width + "px";
@@ -45,21 +39,41 @@ const BasicApplication = ({ className, children }) => {
 
 				target.setAttribute("data-x", x);
 				target.setAttribute("data-y", y);
-			});
+		}
+		interact(".resize-drag")
+			.draggable({
+				onmove: dragMoveListener,
+				cursorChecker() {
+					return null;
+				},
+			})
+			.resizable({
+				preserveAspectRatio: false,
+				edges: { left: true, right: true, bottom: true, top: false }
+			})
+			.on("resizemove", resizeDrag);
+			return () => interact(".resize-drag").unset();
 	}, []);
 
+	const closeClickHandler = (event) => {
+		close(target)
+	}
+
+	const minimizeClickHandler = (event) => {
+		minimize(target)
+	}
+
 	return (
-		<div className={`basic-application-container ${className}`}>
+		<div className={`basic-application-container ${className} ${winState[target].minimized ? "hide-app" : ""} ${winState[target].maximized ? "max" : ""}`}>
 			<div className="basic-application-topbar">
 				<div className="basic-application-topbar-sub-container">
 					<div className="basic-application">icon</div>
-					<div className="basic-application">GitCrash</div>
+					<div className="basic-application">{title}</div>
 				</div>
 				{/* minimize maximize exit buttons */}
 				<div className="basic-application-topbar-sub-container">
-					<div className="basic-application-button">-</div>
-					<div className="basic-application-button">square</div>
-					<div className="basic-application-exit">x</div>
+					<div className="basic-application-button" onClick={minimizeClickHandler}>-</div>
+					<div className="basic-application-exit" onClick={closeClickHandler}>x</div>
 				</div>
 			</div>
 			{children && children}
