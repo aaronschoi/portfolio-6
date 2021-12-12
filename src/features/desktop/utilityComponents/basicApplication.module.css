@@ -40,3 +40,8 @@
 .hide-app {
 	visibility: hidden;
 }
+
+.basic-application-icon {
+	height: 20px;
+	width: 20px;
+}

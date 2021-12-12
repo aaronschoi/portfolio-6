@@ -3,22 +3,18 @@ import GitCrash from "./GitCrash/GitCrash";
 import "./desktop.module.css";
 import Taskbar from "./taskbar/Taskbar";
 import { windowStates } from "../../store/windowStatesStore";
-import { changeToDesktop, changeToLoading } from "../../store/currentWindowStore";
+import LinkedIn from "./linkedin/LinkedIn";
 
 const Desktop = () => {
 
-	const { linkedin, github, resume, gitcrash, vscode } = windowStates.use(store => store)
-
-	const handleThisPlease = (event) => {
-		changeToLoading();
-	}
+	const { linkedin, gitcrash, bscode } = windowStates.use(store => store)
 
 	return (
 		<div className="desktop-container">
 			<div>
 				{gitcrash.open ? <GitCrash /> : null}
+				{linkedin.open ? <LinkedIn /> : null}
 				<RecycleBin />
-				<div onClick={handleThisPlease}>push this</div>
 			</div>
 			<Taskbar />
 		</div>

@@ -13,7 +13,6 @@ const Taskbar = () => {
 			<div className="taskbar-programs taskbar-programs-gap">
 				<MinIcon icon="LinkedIn" value="linkedin" />
 				<MinIcon icon="GitHub" value="github" />
-				<MinIcon icon="Resume" value="resume" />
 				<MinIcon icon="GitCrash" value="gitcrash" />
 			</div>
 			<div className="taskbar-programs taskbar-right">

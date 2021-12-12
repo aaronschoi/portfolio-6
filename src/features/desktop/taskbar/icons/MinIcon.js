@@ -10,15 +10,23 @@ const MinIcon = ({ icon, value }) => {
 	const minStates = windowStates.use((store) => store);
 
 	const mmocHandler = (event) => {
-		if (minStates[value].open) {
-			if (minStates[value].minimized) {
-				unminimize(value);
+		// if (value === "gitcrash") {
+			if (minStates[value].open) {
+				if (minStates[value].minimized) {
+					unminimize(value);
+				} else {
+					minimize(value);
+				}
 			} else {
-				minimize(value);
+				open(value);
 			}
-		} else {
-			open(value);
-		}
+		// } else {
+		// 	if (value === "linkedin") {
+		// 		window.open("https://www.linkedin.com/in/aaronschoi/", "_blank");
+		// 	} else {
+		// 		window.open("https://github.com/aaronschoi", "_blank");
+		// 	}
+		// }
 	};
 
 	const botBar = minStates[value].open
@@ -37,7 +45,10 @@ const MinIcon = ({ icon, value }) => {
 		>
 			<div></div>
 			<div value={value} className="prevent-select">
-				<img className="minicon-icon" src={`http://localhost:8000/www/${icon}.png`} />
+				<img
+					className="minicon-icon"
+					src={`http://localhost:8000/www/${icon}.png`}
+				/>
 			</div>
 			<div className="minicon-bar">
 				<div className={botBar}></div>
