@@ -1,0 +1,43 @@
+.you-container {
+	border-radius: 10px;
+	border: 1px solid lightgray;
+	position: sticky;
+}
+
+.you-icon-container {
+	position: sticky;
+	border-radius: 10px 10px 0 0;
+}
+
+.you-top {
+	background-color: grey;
+	border-radius: 10px 10px 0 0;
+	height: 100px;
+}
+
+.you-content {
+	background-color: white;
+	height: 100px;
+}
+
+.you-icon {
+	border-radius: 50%;
+	border: 3px solid white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+}
+
+.you-line {
+	width: 100%;
+	background-color: lightgray;
+	height: 1px;
+}
+
+.you-bottom {
+	background-color: white;
+	border-radius: 0 0 10px 10px;
+	height: 100px;
+}

@@ -1,0 +1,21 @@
+.linkedin-container {
+	overflow-y: scroll;
+	background-color: whitesmoke;
+	display: grid;
+	grid-template-columns: 1fr 2fr 4fr 2fr 1fr;
+	border-radius: 0 0 10px 10px;
+	gap: 10px;
+	height: 100%;
+}
+
+.linkedin-posts {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.linkedin-basic {
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid lightgray;
+}

@@ -1,0 +1,69 @@
+.faker-container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid lightgray;
+	padding: 15px;
+}
+
+.faker-info-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.faker-info-left {
+	display: flex;
+	gap: 5px;
+}
+
+.faker-info-id {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.faker-info-name {
+	font-weight: bold;
+}
+
+.faker-info-title {
+	font-size: 0.7em;
+	color: rgb(149, 149, 149);
+}
+
+.faker-info-follow {
+	color: blue;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.faker-icon {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+.faker-line-break {
+	height: 1px;
+	background-color: lightgray;
+}
+
+.faker-bottom-buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.faker-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	border-radius: 5px;
+}
+
+.faker-button:hover {
+	background-color: lightgray;
+    cursor: pointer;
+}
