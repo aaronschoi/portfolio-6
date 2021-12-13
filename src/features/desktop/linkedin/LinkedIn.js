@@ -3,6 +3,7 @@ import "./linkedin.module.css";
 import fakers from "./fakers/fakers.json";
 import Faker from "./fakers/Faker";
 import You from "./you/You";
+import RightBlob from "./rightBlob/RightBlob";
 
 const LinkedIn = () => {
 	return (
@@ -21,7 +22,9 @@ const LinkedIn = () => {
 						<Faker key={faker.id} faker={faker} />
 					))}
 				</div>
-				<div></div>
+				<div>
+					<RightBlob />
+				</div>
 				<div></div>
 			</div>
 		</BasicApplication>
