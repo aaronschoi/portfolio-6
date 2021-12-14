@@ -9,6 +9,12 @@ const BasicApplication = ({ className, children, title, target }) => {
 	const winState = windowStates.use();
 
 	React.useEffect(() => {
+		localStorage.setItem("z", parseInt(localStorage.getItem("z")) + 1);
+		document.getElementsByClassName(`resize-drag-${target}`)[0].style.zIndex =
+			localStorage.getItem("z");
+	}, []);
+
+	React.useEffect(() => {
 		let selected = 2000000;
 		function dragMoveListener(event) {
 			const target = event.target;
@@ -49,7 +55,8 @@ const BasicApplication = ({ className, children, title, target }) => {
 		}
 		function decZIndex(event) {
 			const target = event.target;
-			target.style.zIndex = parseInt(localStorage.getItem("z")) + 1;
+			localStorage.setItem("z", parseInt(localStorage.getItem("z")) + 1);
+			target.style.zIndex = localStorage.getItem("z");
 		}
 		interact("." + className)
 			.draggable({
@@ -88,13 +95,15 @@ const BasicApplication = ({ className, children, title, target }) => {
 				<div className="basic-application-topbar-sub-container">
 					<div className="basic-application">
 						<div className="basic-application-icon-container">
-						<img
-							className="basic-application-icon"
-							src={`http://localhost:8000/www/${target}.png`}
-						/>
+							<img
+								className="basic-application-icon"
+								src={`http://localhost:8000/www/${target}.png`}
+							/>
 						</div>
 					</div>
-					<div className="basic-application-title"><div>{title}</div></div>
+					<div className="basic-application-title">
+						<div>{title}</div>
+					</div>
 				</div>
 				{/* minimize maximize exit buttons */}
 				<div className="basic-application-topbar-sub-container">

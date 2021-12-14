@@ -54,6 +54,7 @@
 	justify-content: center;
 	align-items: center;
 	height: 100%;
+	cursor: default;
 }
 
 .basic-application-icon-container {

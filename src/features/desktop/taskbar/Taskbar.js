@@ -1,11 +1,8 @@
 import TimeAndDate from "./timeAndDate/TimeAndDate";
 import "./taskbar.module.css";
 import MinIcon from "./icons/MinIcon";
-import { windowStates } from "../../../store/windowStatesStore";
 
 const Taskbar = () => {
-
-	const openOrNah = windowStates.use(store => store)
 
 	return (
 		<div className="taskbar-container">

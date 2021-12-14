@@ -11,15 +11,19 @@ const MinIcon = ({ icon, value }) => {
 
 	const mmocHandler = (event) => {
 		// if (value === "gitcrash") {
-			if (minStates[value].open) {
-				if (minStates[value].minimized) {
-					unminimize(value);
-				} else {
-					minimize(value);
-				}
+		if (minStates[value].open) {
+			if (minStates[value].minimized) {
+				unminimize(value);
+				localStorage.setItem("z", parseInt(localStorage.getItem("z")) + 1);
+				document.getElementsByClassName(
+					`resize-drag-${value}`
+				)[0].style.zIndex = localStorage.getItem("z");
 			} else {
-				open(value);
+				minimize(value);
 			}
+		} else {
+			open(value);
+		}
 		// } else {
 		// 	if (value === "linkedin") {
 		// 		window.open("https://www.linkedin.com/in/aaronschoi/", "_blank");
