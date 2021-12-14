@@ -1,5 +1,6 @@
 .github-container {
-    background-color: rgb(51, 52, 54);
+    background-color: rgb(33, 33, 34);
     height: 100%;
     width: 100%;
+    border-radius: 0 0 10px 10px;
 }

@@ -15,7 +15,7 @@ const PersistantTopBar = () => {
 			<div></div>
 			<div className="persistanttopbar-choices">
 				{topBarOptions.map((option) => (
-					<TopBarChoice icon={option.toLowerCase()} title={option} />
+					<TopBarChoice key={option} icon={option.toLowerCase()} title={option} />
 				))}
 			</div>
 		</div>

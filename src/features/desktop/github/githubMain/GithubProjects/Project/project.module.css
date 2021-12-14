@@ -1,0 +1,15 @@
+.project-container {
+	border: 1px solid rgb(148, 148, 148);
+	border-radius: 10px;
+    padding: 10px;
+}
+
+.project-link {
+	text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 140, 255);
+}
+
+.project-description {
+	color: rgb(189, 189, 189);
+}

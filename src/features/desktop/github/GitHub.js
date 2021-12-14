@@ -1,5 +1,6 @@
 import BasicApplication from "../utilityComponents/BasicApplication";
 import "./github.module.css";
+import GitHubMain from "./githubMain/GitHubMain";
 import PersistantTopBar from "./persistantTopBar/PersistantTopBar";
 
 const GitHub = () => {
@@ -7,6 +8,7 @@ const GitHub = () => {
         <BasicApplication className="resize-drag-github" title="GitHub" target="github">
             <div className="github-container">
                 <PersistantTopBar />
+                <GitHubMain />
             </div>
         </BasicApplication>
     )

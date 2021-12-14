@@ -5,7 +5,7 @@ export const windows = {
 	DESKTOP: "desktop",
 };
 
-export const currentWindow = createStore(windows.DESKTOP);
+export const currentWindow = createStore(windows.LOADING);
 
 export const changeToDesktop = () => {
 	currentWindow.set(windows.DESKTOP);

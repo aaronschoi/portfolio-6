@@ -5,7 +5,7 @@ const TopBarChoice = ({ icon, title }) => {
         <div className="topbarchoice-container" tabIndex="0">
             <div>{icon}</div>
             <div>{title}</div>
-            {title === "Repositories" ? <div>51</div> : null}
+            {title === "Repositories" ? <div className="reponumber">51</div> : null}
         </div>
     )
 }
