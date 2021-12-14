@@ -1,0 +1,20 @@
+.bscode-topbar-container {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr 1fr;
+	height: 6.25vh;
+}
+
+.bscode-topbar-options {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+}
+
+.bscode-topbar-right {
+	justify-content: flex-end;
+}
+
+.bscode-topbar-middle {
+	justify-content: center;
+}

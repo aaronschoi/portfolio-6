@@ -3,8 +3,8 @@ import ExplorerComponent from "./explorerComponent/ExplorerComponent"
 const BSCodeExplorerBar = () => {
     //it's actually 5 of the same components with different data in each
     return (
-        <div>
-            <div>
+        <div className="bscode-explorer-container">
+            <div className="bscode-explorer-options">
                 <div>EXPLORER</div>
                 <div>...</div>
             </div>
@@ -13,7 +13,7 @@ const BSCodeExplorerBar = () => {
                 <div>someOtherFile.js</div>
                 <div>yetAnotherFile.js</div>
             </ExplorerComponent>
-            <ExplorerComponent title="PORTFOLIO-6">
+            <ExplorerComponent title="FRONTEND">
                 <div>someFile.js</div>
                 <div>someOtherFile.js</div>
                 <div>yetAnotherFile.js</div>

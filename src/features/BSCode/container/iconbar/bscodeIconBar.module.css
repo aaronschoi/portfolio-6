@@ -1,0 +1,13 @@
+.bscode-iconbar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.bscode-iconbar-icons {
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+}
