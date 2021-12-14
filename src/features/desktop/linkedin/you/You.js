@@ -5,7 +5,7 @@ const You = () => {
 		<div className="you-container">
 			<div className="you-icon-container">
 				<div className="you-top"></div>
-				<img className="you-icon" src="https://i.pravatar.cc/100" />
+				<img className="you-icon" src="http://localhost:8000/www/headshot.jpg" />
 				<div className="you-content"></div>
 			</div>
 			<div className="you-line"></div>

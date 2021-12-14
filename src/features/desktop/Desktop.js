@@ -16,13 +16,6 @@ const Desktop = () => {
 				{gitcrash.open ? <GitCrash /> : null}
 				{linkedin.open ? <LinkedIn /> : null}
 				{github.open ? <GitHub /> : null}
-				<a
-					href="https://twitter.com/messages/compose?recipient_id=1378992938760331266"
-					className="twitter-dm-button"
-					data-screen-name="@AarSaChoi"
-				>
-					Message
-				</a>
 			</div>
 			<Taskbar />
 		</div>

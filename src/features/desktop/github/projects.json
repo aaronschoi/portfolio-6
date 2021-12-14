@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title" : "S1Kids.com",
+        "description" : "A site for an amateur CS:GO team built with React and SCSS in the frontend, and PSQL, Node, Express, and Knex in the backend.",
+        "url" : "https://github.com/aaronschoi/s1kids"
+    },
+    {
+        "id": 2,
+        "title" : "Nutrition Tracker",
+        "description" : "A site made for tracking and logging the nutritional content of foods. It was made with React, Redux, and CSS in the frontend, and Node, Express, Knex, PSQL, JWT, and the USDA API in the backend.",
+        "url" : "https://github.com/aaronschoi/nutrition_tracker"
+    },
+    {
+        "id": 3,
+        "title" : "Thinkful Final Capstone",
+        "description" : "A reservation system for a restaurant. It was made with React and CSS in the frontend. It uses NodeJS and Express in the backend.",
+        "url" : "https://github.com/aaronschoi/Thinkful---Final-Capstone"
+    }
+]
