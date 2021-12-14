@@ -87,12 +87,14 @@ const BasicApplication = ({ className, children, title, target }) => {
 			<div className="basic-application-topbar">
 				<div className="basic-application-topbar-sub-container">
 					<div className="basic-application">
+						<div className="basic-application-icon-container">
 						<img
 							className="basic-application-icon"
 							src={`http://localhost:8000/www/${target}.png`}
 						/>
+						</div>
 					</div>
-					<div className="basic-application">{title}</div>
+					<div className="basic-application-title"><div>{title}</div></div>
 				</div>
 				{/* minimize maximize exit buttons */}
 				<div className="basic-application-topbar-sub-container">

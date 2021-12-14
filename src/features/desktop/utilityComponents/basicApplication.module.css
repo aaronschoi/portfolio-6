@@ -24,6 +24,8 @@
 .basic-application-button,
 .basic-application-exit {
 	padding: 0.5em;
+	min-width: 40px;
+	text-align: center;
 }
 
 .basic-application-button:hover {
@@ -44,4 +46,16 @@
 .basic-application-icon {
 	height: 20px;
 	width: 20px;
+}
+
+.basic-application-icon-container,
+.basic-application-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.basic-application-icon-container {
+	width: 40px;
 }
