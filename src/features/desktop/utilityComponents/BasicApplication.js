@@ -85,11 +85,18 @@ const BasicApplication = ({ className, children, title, target }) => {
 		minimize(target);
 	};
 
+	const clickSelectHandler = (event) => {
+		localStorage.setItem("z", parseInt(localStorage.getItem("z")) + 1);
+		document.getElementsByClassName(`resize-drag-${target}`)[0].style.zIndex =
+			localStorage.getItem("z");
+	};
+
 	return (
 		<div
 			className={`basic-application-container ${className} ${
 				winState[target].minimized ? "hide-app" : ""
 			} ${winState[target].maximized ? "max" : ""}`}
+			onClick={clickSelectHandler}
 		>
 			<div className="basic-application-topbar">
 				<div className="basic-application-topbar-sub-container">
