@@ -5,7 +5,7 @@ import PersistantTopBar from "./persistantTopBar/PersistantTopBar";
 
 const GitHub = () => {
     return (
-        <BasicApplication className="resize-drag-github" title="GitHub" target="github">
+        <BasicApplication className="resize-drag-github" title="GitHub Abridged" target="github">
             <div className="github-container">
                 <PersistantTopBar />
                 <GitHubMain />

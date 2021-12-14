@@ -9,7 +9,7 @@ const LinkedIn = () => {
 	return (
 		<BasicApplication
 			className="resize-drag-linkedin"
-			title="LinkedIn"
+			title="BlinkedIn"
 			target="linkedin"
 		>
 			<div className="linkedin-container">

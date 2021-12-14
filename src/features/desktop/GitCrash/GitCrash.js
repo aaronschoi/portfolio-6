@@ -10,6 +10,8 @@ import {
 	incLetter,
 	resetLetter,
 } from "../../../store/gitCrashStore";
+import React from "react";
+import { changeToBSCode } from "../../../store/currentWindowStore";
 
 const GitCrash = () => {
 	const { pcb, letter, currentLine } = gitCrashStore.use((state) => state);
@@ -21,7 +23,7 @@ const GitCrash = () => {
 		} else if (event.keyCode === 13) {
 			if (currentLine === 2) {
 				{
-					/* open bsCODe */
+					changeToBSCode();
 				}
 			} else {
 				incCurrentLine();
@@ -31,6 +33,10 @@ const GitCrash = () => {
 			incLetter();
 		}
 	};
+
+	React.useEffect(() => {
+		document.getElementsByClassName("gitCrash-container")[0].focus();
+	}, [])
 
 	return (
 		<BasicApplication className="resize-drag-gitcrash" title="GitCrash" target="gitcrash">

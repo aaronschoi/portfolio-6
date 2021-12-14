@@ -1,10 +1,12 @@
 .you-container {
 	border-radius: 10px;
 	border: 1px solid lightgray;
+	position: -webkit-sticky;
 	position: sticky;
 }
 
 .you-icon-container {
+	position: -webkit-sticky;
 	position: sticky;
 	border-radius: 10px 10px 0 0;
 }

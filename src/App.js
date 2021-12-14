@@ -1,4 +1,5 @@
 import "./App.css";
+import BSCode from "./features/BSCode/BSCode";
 import Desktop from "./features/desktop/Desktop";
 import Loading from "./features/loadingScreen/Loading";
 import { currentWindow, windows } from "./store/currentWindowStore";
@@ -15,7 +16,7 @@ export function App() {
 		<>
 			{/* this will be the container for the whole page */}
 			<div className="App">
-				{cwindow === windows.DESKTOP ? <Desktop /> : <Loading />}
+				{cwindow === windows.DESKTOP ? <Desktop /> : cwindow === windows.BSCODE ? <BSCode /> : <Loading />}
 			</div>
 		</>
 	);

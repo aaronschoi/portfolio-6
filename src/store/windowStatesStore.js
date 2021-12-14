@@ -16,11 +16,7 @@ const initialWindowStates = {
 	gitcrash: {
 		minimized: false,
 		open: false
-	},
-	bscode: {
-		minimized: false,
-		open: false
-	},
+	}
 };
 
 export const windowStates = createStore(initialWindowStates);

@@ -6,7 +6,7 @@ import LinkedIn from "./linkedin/LinkedIn";
 import GitHub from "./github/GitHub";
 
 const Desktop = () => {
-	const { github, linkedin, gitcrash, bscode } = windowStates.use(
+	const { github, linkedin, gitcrash } = windowStates.use(
 		(store) => store
 	);
 
