@@ -1,5 +1,6 @@
-import ExplorerComponent from "./explorerComponent/ExplorerComponent";
+import ExplorerComponent from "./NestedOptions/explorerComponent/ExplorerComponent";
 import "./bscodeExplorerBar.module.css";
+import { v4 } from 'uuid';
 
 const BSCodeExplorerBar = () => {
 	//it's actually 5 of the same components with different data in each

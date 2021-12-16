@@ -1,0 +1,71 @@
+[
+    {
+        "title" : "nestedFolder",
+        "subdir" : [
+            [
+                {
+                    "title" : "index.js",
+                    "icon": "JS"
+                },
+                {
+                    "title" : "main.js",
+                    "icon": "JS"
+                },
+                {
+                    "title" : "App.js",
+                    "icon": "JS"
+                },
+                {
+                    "title" : "Component.js",
+                    "icon": "JS"
+                }
+            ]
+        ]
+    },
+    {
+        "title" : "anotherNestedFolder",
+        "subdir" : [
+            [
+                {
+                    "title" : "index.js",
+                    "icon": "JS"
+                },
+                {
+                    "title" : "main.js",
+                    "icon": "JS"
+                },
+                {
+                    "title" : "App.js",
+                    "icon": "JS"
+                },
+                {
+                    "title" : "Component.js",
+                    "icon": "JS"
+                }
+            ]
+        ]
+    },
+    {
+        "title" : "aThirdNestedFolder",
+        "subdir" : [
+            [
+                {
+                    "title" : "index.js",
+                    "icon": "JS"
+                },
+                {
+                    "title" : "main.js",
+                    "icon": "JS"
+                },
+                {
+                    "title" : "App.js",
+                    "icon": "JS"
+                },
+                {
+                    "title" : "Component.js",
+                    "icon": "JS"
+                }
+            ]
+        ]
+    }
+]

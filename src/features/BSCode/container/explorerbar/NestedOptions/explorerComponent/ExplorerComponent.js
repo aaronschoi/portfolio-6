@@ -1,6 +1,6 @@
 import "./bscodeExplorerComponent.module.css";
 
-const ExplorerComponent = ({ title, icon = "", children }) => {
+const ExplorerComponent = ({ dir : {title, icon = ""}, children }) => {
 	const [arrow, setArrow] = React.useState(false);
 	const handleExpand = (event) => {
 		if (icon === "") {
