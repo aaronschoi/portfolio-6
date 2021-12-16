@@ -1,6 +1,11 @@
 import "./bscodeExplorerComponent.module.css";
 
-const ExplorerComponent = ({ dir : {title, icon = ""}, children, className = "" }) => {
+const ExplorerComponent = ({
+	dir: { title, icon = "" },
+	children,
+	className = "",
+	spacer,
+}) => {
 	const [arrow, setArrow] = React.useState(false);
 	const handleExpand = (event) => {
 		if (icon === "") {
@@ -12,18 +17,20 @@ const ExplorerComponent = ({ dir : {title, icon = ""}, children, className = "" 
 	const fileView = arrow ? (
 		<div className="bscode-explorer-expander">{children}</div>
 	) : null;
-	const tab = { transform: `translate(${className === "" ? "1" : ""}0px)` };
+	const tab = {
+		transform: `translate(${className === "" ? `${spacer}` : ""}0px)`,
+	};
 	return (
-		<div className="noselect">
-		<div tabIndex="0" className="bscode-explorer-highlight">
-			<div
-				onClick={handleExpand}
-				className={`bscode-explorer-component-container ${className}`}
-				style={tab}
-			>
-				{caret}
-				{title}
-			</div>
+		<div>
+			<div tabIndex="0" className="bscode-explorer-highlight">
+				<div
+					onClick={handleExpand}
+					className={`bscode-explorer-component-container ${className}`}
+					style={tab}
+				>
+					{caret}
+					{title}
+				</div>
 			</div>
 			{fileView}
 		</div>

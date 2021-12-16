@@ -7,3 +7,19 @@
 	flex-direction: column;
 	justify-content: space-around;
 }
+
+.bscode-explorer-title {
+	display: flex;
+	justify-content: space-around;
+	background-color: grey;
+}
+
+.bscode-explorer-dots {
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.bscode-explorer-dots:hover {
+	cursor: pointer;
+	background-color: lightgray;
+}

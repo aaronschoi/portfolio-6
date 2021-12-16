@@ -6,10 +6,12 @@ import "./bscodeContainer.module.css";
 const BSCodeContainer = ({ children }) => {
 	return (
 		<div className="bscode-container">
+			<div id="bscode-container-area">
 			<BSCodeTopBar />
 			<div className="bscode-main-area">
 			<BSCodeIconBar />
 			<BSCodeExplorerBar />
+			</div>
 			{children}
 			</div>
 		</div>
