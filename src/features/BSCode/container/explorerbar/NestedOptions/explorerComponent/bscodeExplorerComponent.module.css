@@ -4,11 +4,16 @@
 	gap: 10px;
 }
 
-.bscode-explorer-component-container:focus {
+.bscode-explorer-highlight:focus {
 	border: 1px solid blue;
 	background-color: grey;
 }
 
 .bscode-explorer-expander {
 	overflow: scroll;
+}
+
+.explorer-option-title {
+	background-color: grey;
+	color: white;
 }

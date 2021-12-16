@@ -1,6 +1,7 @@
-import ExplorerComponent from "./NestedOptions/explorerComponent/ExplorerComponent";
+import explorerOptions from "./explorerOptions/explorerOptions.json";
 import "./bscodeExplorerBar.module.css";
 import { v4 } from 'uuid';
+import NestedOptions from "./NestedOptions/NestedOptions";
 
 const BSCodeExplorerBar = () => {
 	//it's actually 5 of the same components with different data in each
@@ -9,32 +10,8 @@ const BSCodeExplorerBar = () => {
 			<div className="bscode-explorer-options">
 				<div>EXPLORER</div>
 				<div>...</div>
+				{explorerOptions.map(dir => <NestedOptions key={v4()} dir={dir} className="explorer-option-title" />)}
 			</div>
-			<ExplorerComponent title="OPEN EDITORS">
-			</ExplorerComponent>
-			<ExplorerComponent title="FRONTEND">
-				<ExplorerComponent title="folder" spacer={1}>
-					<ExplorerComponent title="folderWithin" spacer={1}>
-						<ExplorerComponent title="someJSFile.js" icon="JS" />
-					</ExplorerComponent>
-				</ExplorerComponent>
-				<ExplorerComponent title="someOtherFile.js" icon="JS" />
-				<ExplorerComponent title="yetAnotherFile.js" icon="JS" />
-			</ExplorerComponent>
-			<ExplorerComponent title="OUTLINE">
-				<div>someFile.js</div>
-				<div>someOtherFile.js</div>
-				<div>yetAnotherFile.js</div>
-			</ExplorerComponent>
-			<ExplorerComponent title="TIMELINE">
-				<div>Uncommited Changes</div>
-			</ExplorerComponent>
-			<ExplorerComponent title="NPM SCRIPTS">
-				<div>dev</div>
-				<div>build</div>
-				<div>serve</div>
-				<div>start</div>
-			</ExplorerComponent>
 		</div>
 	);
 };

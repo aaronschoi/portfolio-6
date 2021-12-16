@@ -1,0 +1,129 @@
+[
+    {
+        "title" : "OPEN EDITORS",
+        "subdir" : [
+            {
+                "title" : "index.js",
+                "icon": "JS"
+            },
+            {
+                "title" : "main.js",
+                "icon": "JS"
+            },
+            {
+                "title" : "App.js",
+                "icon": "JS"
+            },
+            {
+                "title" : "Component.js",
+                "icon": "JS"
+            }
+        ]
+    },
+    {
+        "title" : "FRONTEND",
+        "subdir" : [
+            {
+                "title" : "nestedFolder",
+                "subdir" :
+                    [
+                        {
+                            "title" : "index.js",
+                            "icon": "JS"
+                        },
+                        {
+                            "title" : "main.js",
+                            "icon": "JS"
+                        },
+                        {
+                            "title" : "App.js",
+                            "icon": "JS"
+                        },
+                        {
+                            "title" : "Component.js",
+                            "icon": "JS"
+                        }
+                    ]
+            },
+            {
+                "title" : "anotherNestedFolder",
+                "subdir" :
+                    [
+                        {
+                            "title" : "index.js",
+                            "icon": "JS"
+                        },
+                        {
+                            "title" : "main.js",
+                            "icon": "JS"
+                        },
+                        {
+                            "title" : "App.js",
+                            "icon": "JS"
+                        },
+                        {
+                            "title" : "Component.js",
+                            "icon": "JS"
+                        }
+                    ]
+            },
+            {
+                "title" : "aThirdNestedFolder",
+                "subdir" : 
+                    [
+                        {
+                            "title" : "index.js",
+                            "icon": "JS"
+                        },
+                        {
+                            "title" : "main.js",
+                            "icon": "JS"
+                        },
+                        {
+                            "title" : "App.js",
+                            "icon": "JS"
+                        },
+                        {
+                            "title" : "Component.js",
+                            "icon": "JS"
+                        }
+                    ]
+            }
+        ]
+    },
+    {
+        "title" : "TIMELINE",
+        "subdir" : [
+            {
+                "title" : "Last Commit Message",
+                "icon" : " "
+            }
+        ]
+    },
+    {
+        "title" : "NPM SCRIPTS",
+        "subdir" : [
+            {
+                "title" : "package.json",
+                "subdir" : [
+                        {
+                            "title" : "dev",
+                            "icon" : "wrench"
+                        },
+                        {
+                            "title" : "build",
+                            "icon" : "wrench"
+                        },
+                        {
+                            "title" : "server",
+                            "icon" : "wrench"
+                        },
+                        {
+                            "title" : "start",
+                            "icon" : "wrench"
+                        }
+                ]
+            }
+        ]
+    }
+]
