@@ -1,18 +1,21 @@
-[
-    {
-        "title" : "index.js",
-        "icon": "JS"
-    },
-    {
-        "title" : "main.js",
-        "icon": "JS"
-    },
-    {
-        "title" : "App.js",
-        "icon": "JS"
-    },
-    {
-        "title" : "Component.js",
-        "icon": "JS"
-    }
-]
+{
+    "title" : "OPEN EDITORS",
+    "subdir" : [
+        {
+            "title" : "index.js",
+            "icon": "JS"
+        },
+        {
+            "title" : "main.js",
+            "icon": "JS"
+        },
+        {
+            "title" : "App.js",
+            "icon": "JS"
+        },
+        {
+            "title" : "Component.js",
+            "icon": "JS"
+        }
+    ]
+}

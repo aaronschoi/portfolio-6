@@ -11,9 +11,6 @@ const BSCodeExplorerBar = () => {
 				<div>...</div>
 			</div>
 			<ExplorerComponent title="OPEN EDITORS">
-				<ExplorerComponent title="someFile.js" icon="JS" />
-				<ExplorerComponent title="someOtherFile.js" icon="JS" />
-				<ExplorerComponent title="yetAnotherFile.js" icon="JS" />
 			</ExplorerComponent>
 			<ExplorerComponent title="FRONTEND">
 				<ExplorerComponent title="folder" spacer={1}>
