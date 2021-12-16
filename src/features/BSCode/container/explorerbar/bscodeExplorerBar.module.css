@@ -1,7 +1,10 @@
 .bscode-explorer-container {
-
+	height: 93.75vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .bscode-explorer-options {
-    
+	display: flex;
+	justify-content: space-around;
 }

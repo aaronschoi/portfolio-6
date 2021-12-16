@@ -1,9 +1,14 @@
 .bscode-explorer-component-container {
-    display: flex;
-    justify-content: space-around;
-    cursor: pointer;
+	display: flex;
+	cursor: pointer;
+	gap: 10px;
 }
 
 .bscode-explorer-component-container:focus {
-    border: 1px solid blue;
+	border: 1px solid blue;
+	background-color: grey;
+}
+
+.bscode-explorer-expander {
+	overflow: scroll;
 }
