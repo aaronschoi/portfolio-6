@@ -1,6 +1,7 @@
 import "./newGitLine.module.css";
+import TypeLine from "./TypeLine/TypeLine";
 
-const NewGitLine = ({ path, command, branch }) => {
+const NewGitLine = ({ path, command, branch, bound }) => {
 	return (
 		<div className="new-git-line-container">
 			<div className="new-git-line-title">
@@ -15,7 +16,7 @@ const NewGitLine = ({ path, command, branch }) => {
 				</span>
 				<span className="new-git-line-branch new-git-line-font">{branch}</span>
 			</div>
-			<div className="new-git-line-command new-git-line-font">{`$ ${command}`}</div>
+			<div className="new-git-line-command new-git-line-font">{`$ ${command}`}<TypeLine bound={bound} /></div>
 		</div>
 	);
 };

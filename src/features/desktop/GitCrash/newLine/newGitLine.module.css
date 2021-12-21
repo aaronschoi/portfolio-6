@@ -31,4 +31,5 @@
 
 .new-git-line-command {
     color: white;
+    display: flex;
 }

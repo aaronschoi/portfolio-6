@@ -3,7 +3,7 @@
 	width: 100vw;
 	overflow: hidden;
 	color: white;
-	background-color: black;
+	background-color: var(--color-g);
 }
 
 .bscode-main-area {

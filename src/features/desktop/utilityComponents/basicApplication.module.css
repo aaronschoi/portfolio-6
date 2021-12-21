@@ -3,6 +3,8 @@
 	flex-direction: column;
 	height: 66vh;
 	width: 66vw;
+	min-width: 33vw;
+	min-height: 33vh;
 	border-radius: 10px;
 	position: fixed;
 	box-shadow: 2.5px 1px 1px rgba(0, 0, 0, 0.12),

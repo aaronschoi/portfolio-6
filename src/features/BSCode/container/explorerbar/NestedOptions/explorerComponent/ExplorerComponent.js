@@ -22,7 +22,7 @@ const ExplorerComponent = ({
 	};
 	return (
 		<div>
-			<div tabIndex="0" className="bscode-explorer-highlight">
+			<div tabIndex="0" className={`bscode-explorer-highlight ${className === "" ? "highlight-file" : "highlight-title"}`}>
 				<div
 					onClick={handleExpand}
 					className={`bscode-explorer-component-container ${className}`}

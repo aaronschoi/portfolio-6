@@ -1,3 +1,12 @@
+:root {
+	--color-lb : rgba(18, 146, 231, .8);
+	--color-lb-t : rgba(18, 146, 231, .5);
+	--color-lg-t : rgba(60, 60, 60, .5);
+	--color-lg : rgba(60, 60, 60);
+	--color-g: rgba(37, 37, 38);
+	--color-dg: hsl(160, 0, 31);
+}
+
 #bscode-container-area * {
     -webkit-touch-callout: none;
 	  -webkit-user-select: none;

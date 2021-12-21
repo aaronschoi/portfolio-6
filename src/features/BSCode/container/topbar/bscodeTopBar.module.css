@@ -3,6 +3,9 @@
 	width: 100%;
 	grid-template-columns: 1fr 1fr 1fr;
 	height: 6.25vh;
+	background-color: var(--color-lg);
+	justify-content: center;
+	align-items: center;
 }
 
 .bscode-topbar-options {

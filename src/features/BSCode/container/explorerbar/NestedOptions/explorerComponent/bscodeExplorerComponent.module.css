@@ -4,9 +4,22 @@
 	gap: 10px;
 }
 
+.bscode-explorer-highlight {
+	border: 1px solid var(--color-g);
+}
+
+.highlight-title {
+	border: 1px solid var(--color-lg);
+}
+
 .bscode-explorer-highlight:focus {
-	border: 1px solid blue;
-	background-color: grey;
+	border: 1px solid var(--color-lb);
+	background-color: var(--color-lg-t);
+}
+
+.highlight-file:focus {
+	border: 1px solid var(--color-lb);
+	background-color: var(--color-lb-t);	
 }
 
 .bscode-explorer-expander {
@@ -14,6 +27,6 @@
 }
 
 .explorer-option-title {
-	background-color: grey;
+	background-color: var(--color-lg);
 	color: white;
 }

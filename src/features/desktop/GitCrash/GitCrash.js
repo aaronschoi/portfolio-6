@@ -14,7 +14,7 @@ import React from "react";
 import { changeToBSCode } from "../../../store/currentWindowStore";
 
 const GitCrash = () => {
-	const { pcb, letter, currentLine } = gitCrashStore.use((state) => state);
+	const { letter, currentLine } = gitCrashStore.use();
 
 	const backspaceHandler = (event) => {
 		event.preventDefault();
@@ -36,10 +36,15 @@ const GitCrash = () => {
 
 	React.useEffect(() => {
 		document.getElementsByClassName("gitCrash-container")[0].focus();
-	}, [])
+		console.log(document.activeElement)
+	}, []);
 
 	return (
-		<BasicApplication className="resize-drag-gitcrash" title="GitCrash" target="gitcrash">
+		<BasicApplication
+			className="resize-drag-gitcrash"
+			title="GitCrash"
+			target="gitcrash"
+		>
 			<div
 				className="gitCrash-container"
 				tabIndex="0"
@@ -54,23 +59,10 @@ const GitCrash = () => {
 						0,
 						currentLine
 					)}`}
+					bound={0}
 				/>
-				{currentLine > 0 ? (
-					<FormattedLine
-						pcb={pcb[1]}
-						line={1}
-						letter={letter}
-						currentLine={currentLine}
-					/>
-				) : null}
-				{currentLine > 1 ? (
-					<FormattedLine
-						pcb={pcb[2]}
-						line={2}
-						letter={letter}
-						currentLine={currentLine}
-					/>
-				) : null}
+				<FormattedLine line={1} bound={0} />
+				<FormattedLine line={2} bound={1} />
 			</div>
 		</BasicApplication>
 	);
