@@ -12,7 +12,7 @@ const Desktop = () => {
 
 	return (
 		<div className="desktop-container">
-			<div>
+			<div id="desktop-main-area">
 				{gitcrash.open ? <GitCrash /> : null}
 				{linkedin.open ? <LinkedIn /> : null}
 				{github.open ? <GitHub /> : null}

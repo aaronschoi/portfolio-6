@@ -1,4 +1,5 @@
-import BasicApplication from "../utilityComponents/BasicApplication";
+import BasicApplication from "../utilityComponents/BasicApplication/BasicApplication";
+import ResponsiveAppContent from "../utilityComponents/ResponsiveAppContent/ResponsiveAppContent";
 import "./github.module.css";
 import GitHubMain from "./githubMain/GitHubMain";
 import PersistantTopBar from "./persistantTopBar/PersistantTopBar";

@@ -1,9 +1,10 @@
-import BasicApplication from "../utilityComponents/BasicApplication";
+import BasicApplication from "../utilityComponents/BasicApplication/BasicApplication";
 import "./linkedin.module.css";
 import fakers from "./fakers/fakers.json";
 import Faker from "./fakers/Faker";
 import You from "./you/You";
 import RightBlob from "./rightBlob/RightBlob";
+import ResponsiveAppContent from "../utilityComponents/ResponsiveAppContent/ResponsiveAppContent";
 
 const LinkedIn = () => {
 	return (
@@ -12,7 +13,7 @@ const LinkedIn = () => {
 			title="BlinkedIn"
 			target="linkedin"
 		>
-			<div className="linkedin-container">
+			<ResponsiveAppContent className="linkedin-container" target="linkedin">
 				<div></div>
 				<div>
 					<You />
@@ -26,7 +27,7 @@ const LinkedIn = () => {
 					<RightBlob />
 				</div>
 				<div></div>
-			</div>
+			</ResponsiveAppContent>
 		</BasicApplication>
 	);
 };

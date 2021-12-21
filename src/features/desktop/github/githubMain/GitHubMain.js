@@ -1,14 +1,15 @@
+import ResponsiveAppContent from "../../utilityComponents/ResponsiveAppContent/ResponsiveAppContent";
 import "./githubMain.module.css";
 import GitHubPersonal from "./GithubPersonal/GitHubPersonal";
 import GitHubProjects from "./GithubProjects/GitHubProjects";
 
 const GitHubMain = () => {
 	return (
-		<div className="githubmain-container">
+		<ResponsiveAppContent className="githubmain-container" target="github">
 			<div></div>
 			<GitHubPersonal />
 			<GitHubProjects />
-		</div>
+		</ResponsiveAppContent>
 	);
 };
 

@@ -4,7 +4,7 @@
     border-radius: 10px;
     background-color: white;
     border: 1px solid lightgray;
-    height: 300px;
+    height: max-content;
     gap: 15px;
     padding: 10px;
 }

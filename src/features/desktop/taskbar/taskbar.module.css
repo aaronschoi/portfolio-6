@@ -8,6 +8,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--taskbar-bg);
     opacity: 0.93;
+    z-index: 3000000;
 }
 
 .taskbar-programs {

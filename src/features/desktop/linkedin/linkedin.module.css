@@ -1,11 +1,21 @@
-.linkedin-container {
+.linkedin-container, .linkedin-container-mini {
 	overflow-y: scroll;
 	background-color: whitesmoke;
+	border-radius: 0 0 10px 10px;
+	height: 100%;
+}
+
+.linkedin-container {
 	display: grid;
 	grid-template-columns: 1fr 2fr 4fr 2fr 1fr;
-	border-radius: 0 0 10px 10px;
 	gap: 10px;
-	height: 100%;
+}
+
+.linkedin-container-mini {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	gap: 10px;
 }
 
 .linkedin-posts {

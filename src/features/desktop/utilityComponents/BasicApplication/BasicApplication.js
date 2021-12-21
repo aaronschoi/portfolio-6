@@ -2,7 +2,7 @@ import {
 	close,
 	windowStates,
 	minimize,
-} from "../../../store/windowStatesStore";
+} from "../../../../store/windowStatesStore";
 import "./basicApplication.module.css";
 
 const BasicApplication = ({ className, children, title, target }) => {
@@ -65,11 +65,11 @@ const BasicApplication = ({ className, children, title, target }) => {
 				onend: decZIndex,
 				cursorChecker() {
 					return null;
-				},
+				}
 			})
 			.resizable({
 				preserveAspectRatio: false,
-				edges: { left: true, right: true, bottom: true, top: false },
+				edges: { left: true, right: true, bottom: true, top: false }
 			})
 			.on("resizemove", resizeDrag)
 			.on("resizestart", incZIndex)
@@ -93,6 +93,7 @@ const BasicApplication = ({ className, children, title, target }) => {
 
 	return (
 		<div
+			id={target}
 			className={`basic-application-container ${className} ${
 				winState[target].minimized ? "hide-app" : ""
 			} ${winState[target].maximized ? "max" : ""}`}

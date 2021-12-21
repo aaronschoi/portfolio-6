@@ -1,35 +1,42 @@
 .new-git-line-font {
-    font-size: 1.4em;
+	font-size: 1.4em;
 }
 
 .new-git-line-computer-name {
-    color: lime;
+	color: lime;
 }
 
 .new-git-line-system-label {
-    color: magenta;
+	color: magenta;
 }
 
 .new-git-line-path {
-    color: yellow;
+	color: yellow;
 }
 
 .new-git-line-branch {
-    color: cyan;
+	color: cyan;
+}
+
+.new-git-line-computer-name,
+.new-git-line-system-label,
+.new-git-line-path,
+.new-git-line-branch {
+	white-space: nowrap;
 }
 
 .new-git-line-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1em;
+	display: flex;
+	flex-direction: column;
+	margin-top: 1em;
 }
 
 .new-git-line-title {
-    display: flex;
-    gap: 1em;
+	display: flex;
+	gap: 1em;
 }
 
 .new-git-line-command {
-    color: white;
-    display: flex;
+	color: white;
+	display: flex;
 }

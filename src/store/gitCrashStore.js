@@ -28,10 +28,12 @@ export const incLetter = () => {
 }
 
 export const decLetter = () => {
+    const dL = setTimeout(() => {
     gitCrashStore.set(state => ({
         ...state,
-        letter: state.letter - 1
-    }))
+        letter: state.letter === 0 ? 0 : state.letter - 1
+    }))}, 0)
+    return () => clearTimeout(dL)
 }
 
 export const resetLetter = () => {

@@ -1,4 +1,4 @@
-import BasicApplication from "../utilityComponents/BasicApplication";
+import BasicApplication from "../utilityComponents/BasicApplication/BasicApplication";
 import NewGitLine from "./newLine/NewGitLine";
 import "./gitCrash.module.css";
 import { makeString } from "./util";
