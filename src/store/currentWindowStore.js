@@ -6,7 +6,7 @@ export const windows = {
 	BSCODE: "bscode",
 };
 
-export const currentWindow = createStore(windows.BSCODE);
+export const currentWindow = createStore(windows.DESKTOP);
 
 export const changeToDesktop = () => {
 	currentWindow.set(windows.DESKTOP);

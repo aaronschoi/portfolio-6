@@ -1,9 +1,11 @@
 import TimeAndDate from "./timeAndDate/TimeAndDate";
 import "./taskbar.module.css";
-import MinIcon from "./icons/MinIcon";
+import MinIcon from "./MinIcon/MinIcon";
+import WifiIcon from "./icons/WifiIcon";
+import SoundIcon from "./icons/SoundIcon";
+import PowerIcon from "./icons/PowerIcon";
 
 const Taskbar = () => {
-
 	return (
 		<div className="taskbar-container">
 			<div></div>
@@ -21,9 +23,9 @@ const Taskbar = () => {
 					<div>ENG</div>
 				</div>
 				<div className="taskbar-programs taskbar-right-icon taskbar-settings">
-					<div>wifi</div>
-					<div>sound</div>
-					<div>battery</div>
+					<WifiIcon />
+					<SoundIcon />
+					<PowerIcon />
 				</div>
 				<TimeAndDate />
 			</div>
