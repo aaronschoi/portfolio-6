@@ -4,6 +4,7 @@ import MinIcon from "./MinIcon/MinIcon";
 import WifiIcon from "./icons/WifiIcon";
 import SoundIcon from "./icons/SoundIcon";
 import PowerIcon from "./icons/PowerIcon";
+import Chevron from "../utilityComponents/Chevrons/Chevron";
 
 const Taskbar = () => {
 	return (
@@ -15,9 +16,8 @@ const Taskbar = () => {
 				<MinIcon icon="GitCrash" value="gitcrash" />
 			</div>
 			<div className="taskbar-programs taskbar-right">
-				{/* create notifications */}
 				<div className="taskbar-programs taskbar-caret">
-					<div>^</div>
+					<Chevron orientation="up" />
 				</div>
 				<div className="taskbar-programs taskbar-right-icon">
 					<div>ENG</div>

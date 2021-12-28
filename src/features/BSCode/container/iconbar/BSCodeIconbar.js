@@ -1,19 +1,25 @@
 import "./bscodeIconBar.module.css"
+import DebugButActuallyACakeIcon from "./icons/DebugButActuallyACake";
+import ExplorerIcon from "./icons/ExplorerIcon";
+import ExtensionsButActuallyAPuzzleIcon from "./icons/ExtensionsButActuallyAPuzzleIcon";
+import GitButActuallyShareIcon from "./icons/GitButActuallyShareIcon";
+import SearchIcon from "./icons/SearchIcon";
+import UserIcon from "./icons/UserIcon";
+import SettingIcon from "./icons/SettingIcons";
 
 const BSCodeIconBar = () => {
 	return (
 		<div className="bscode-iconbar-container">
 			<div className="bscode-iconbar-icons">
-				<div>papers</div>
-				<div>magnifying glass</div>
-				<div>git thing</div>
-				<div>debug</div>
-				<div>addons</div>
-				<div>liveshare</div>
+				<ExplorerIcon />
+				<SearchIcon />
+				<GitButActuallyShareIcon />
+				<DebugButActuallyACakeIcon />
+				<ExtensionsButActuallyAPuzzleIcon />
 			</div>
 			<div className="bscode-iconbar-icons">
-				<div>account</div>
-				<div>settings</div>
+				<UserIcon />
+				<SettingIcon />
 			</div>
 		</div>
 	);

@@ -9,5 +9,5 @@
 .bscode-main-area {
 	display: grid;
 	height: 93.75vh;
-	grid-template-columns: 1fr 2fr 9fr;
+	grid-template-columns: 4.5em 2fr 9fr;
 }

@@ -1,3 +1,4 @@
+import Chevron from "../../../../../desktop/utilityComponents/Chevrons/Chevron";
 import "./bscodeExplorerComponent.module.css";
 
 const ExplorerComponent = ({
@@ -13,7 +14,11 @@ const ExplorerComponent = ({
 		}
 	};
 	const caret =
-		icon === "" ? <div>{arrow ? ">" : "v"}</div> : <div>{icon}</div>;
+		icon === "" ? (
+			<Chevron orientation={`${arrow ? "right" : "down"}`} />
+		) : (
+			<div>{icon}</div>
+		);
 	const fileView = arrow ? (
 		<div className="bscode-explorer-expander">{children}</div>
 	) : null;
@@ -22,7 +27,12 @@ const ExplorerComponent = ({
 	};
 	return (
 		<div>
-			<div tabIndex="0" className={`bscode-explorer-highlight ${className === "" ? "highlight-file" : "highlight-title"}`}>
+			<div
+				tabIndex="0"
+				className={`bscode-explorer-highlight ${
+					className === "" ? "highlight-file" : "highlight-title"
+				}`}
+			>
 				<div
 					onClick={handleExpand}
 					className={`bscode-explorer-component-container ${className}`}
