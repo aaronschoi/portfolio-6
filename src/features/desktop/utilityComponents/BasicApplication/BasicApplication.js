@@ -4,6 +4,8 @@ import {
 	minimize,
 } from "../../../../store/windowStatesStore";
 import "./basicApplication.module.css";
+import CloseIcon from "./icons/CloseIcon";
+import MinimizeIcon from "./icons/MinimizeIcon";
 
 const BasicApplication = ({ className, children, title, target }) => {
 	const winState = windowStates.use();
@@ -113,16 +115,15 @@ const BasicApplication = ({ className, children, title, target }) => {
 						<div>{title}</div>
 					</div>
 				</div>
-				{/* minimize maximize exit buttons */}
 				<div className="basic-application-topbar-sub-container">
 					<div
 						className="basic-application-button"
 						onClick={minimizeClickHandler}
 					>
-						-
+						<MinimizeIcon />
 					</div>
 					<div className="basic-application-exit" onClick={closeClickHandler}>
-						x
+						<CloseIcon />
 					</div>
 				</div>
 			</div>

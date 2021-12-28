@@ -30,3 +30,8 @@
 	background-color: var(--color-lg);
 	color: white;
 }
+
+.explorer-js {
+	color: rgba(203, 203, 65, 1);
+	font-weight: bold;
+}

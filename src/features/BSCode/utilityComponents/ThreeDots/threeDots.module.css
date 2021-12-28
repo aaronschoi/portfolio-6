@@ -1,0 +1,20 @@
+.threedots {
+	display: flex;
+	gap: 5px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.threedots:hover {
+	cursor: pointer;
+	background-color: var(--color-lg);
+}
+
+.threedots > div {
+	height: 0.25em;
+	width: 0.25em;
+	border-radius: 50%;
+	background-color: white;
+}
