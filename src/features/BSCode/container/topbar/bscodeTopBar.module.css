@@ -10,14 +10,46 @@
 
 .bscode-topbar-options {
 	display: flex;
-	gap: 10px;
 	width: 100%;
 }
 
 .bscode-topbar-right {
 	justify-content: flex-end;
+	height: 100%;
 }
 
 .bscode-topbar-middle {
 	justify-content: center;
+}
+
+.bscode-topbar-left {
+	height: 100%;
+}
+
+.bscode-topbar-left-option,
+.bscode-topbar-left-icon,
+.bscode-topbar-right-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.bscode-topbar-left-icon,
+.bscode-topbar-right-icon {
+	padding: 0 10px;
+}
+
+.bscode-topbar-left-option {
+	padding: 0 5px;
+}
+
+.bscode-topbar-left-option:hover,
+.bscode-topbar-right-minimize:hover {
+	cursor: pointer;
+	background-color: var(--color-dg);
+}
+
+.bscode-topbar-right-close:hover {
+	cursor: pointer;
+	background-color: red;
 }

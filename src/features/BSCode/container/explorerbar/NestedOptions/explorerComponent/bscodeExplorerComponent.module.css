@@ -2,6 +2,7 @@
 	display: flex;
 	cursor: pointer;
 	gap: 10px;
+	padding: 5px 2px;
 }
 
 .bscode-explorer-highlight {
@@ -19,7 +20,7 @@
 
 .highlight-file:focus {
 	border: 1px solid var(--color-lb);
-	background-color: var(--color-lb-t);	
+	background-color: var(--color-lb-t);
 }
 
 .bscode-explorer-expander {

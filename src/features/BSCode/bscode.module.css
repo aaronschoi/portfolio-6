@@ -4,7 +4,7 @@
 	--color-lg-t : rgba(60, 60, 60, .5);
 	--color-lg : rgba(60, 60, 60);
 	--color-g: rgba(37, 37, 38);
-	--color-dg: hsl(160, 0, 31);
+	--color-dg: rgba(80, 80, 80);
 }
 
 #bscode-container-area * {
@@ -14,4 +14,5 @@
 		 -moz-user-select: none;
 		  -ms-user-select: none;
 			  user-select: none;
+	font-size: 1.2rem;
 }

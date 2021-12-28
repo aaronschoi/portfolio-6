@@ -1,0 +1,28 @@
+.maximize-icon-container {
+	position: relative;
+	background-color: inherit;
+	padding: 0 1em 0 0.75em;
+}
+
+.maximize-icon {
+	height: 0.75em;
+	width: 0.75em;
+	background-color: var(--color-lg);
+	border: 1px solid white;
+}
+
+.maximize-icon-front {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.maximize-icon-behind {
+	position: absolute;
+	transform: translate(-15%, -75%);
+}
+
+.max-dg {
+	background-color: var(--color-dg);
+}
