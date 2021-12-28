@@ -6,8 +6,7 @@ const PersistantTopBar = () => {
 		"Overview",
 		"Repositories",
 		"Projects",
-		"Packages",
-		"Stars",
+		"Packages"
 	]);
 
 	return (
@@ -15,7 +14,7 @@ const PersistantTopBar = () => {
 			<div></div>
 			<div className="persistanttopbar-choices">
 				{topBarOptions.map((option) => (
-					<TopBarChoice key={option} icon={option.toLowerCase()} title={option} />
+					<TopBarChoice key={option} title={option} />
 				))}
 			</div>
 		</div>

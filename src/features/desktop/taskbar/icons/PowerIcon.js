@@ -1,8 +1,8 @@
-import IconWrapper from "./IconWrapper.js/IconWrapper";
+import IconWrapper from "../../utilityComponents/IconWrapper/IconWrapper";
 
 const PowerIcon = () => {
 	return (
-		<IconWrapper className="powericon">
+		<IconWrapper>
 			<path
 				strokeLinecap="round"
 				strokeLinejoin="round"

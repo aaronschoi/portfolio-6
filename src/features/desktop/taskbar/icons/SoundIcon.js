@@ -1,4 +1,4 @@
-import IconWrapper from "./IconWrapper.js/IconWrapper";
+import IconWrapper from "../../utilityComponents/IconWrapper/IconWrapper";
 
 const SoundIcon = () => {
 	return (

@@ -1,9 +1,9 @@
 import { useIconWrapper } from "./useIconWrapper";
 
-const IconWrapper = ({ children, className }) => {
+const IconWrapper = ({ children }) => {
 	const svgDetails = useIconWrapper();
 	return (
-		<svg {...svgDetails} className={className}>
+		<svg {...svgDetails}>
 			{children}
 		</svg>
 	);
