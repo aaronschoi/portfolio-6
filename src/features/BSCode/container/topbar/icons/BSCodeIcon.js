@@ -9,7 +9,7 @@ const BSCodeIcon = () => {
 		>
 			<mask
 				id="mask0"
-				maskType="alpha"
+				// maskType="alpha"
 				maskUnits="userSpaceOnUse"
 				x="0"
 				y="0"
@@ -40,7 +40,7 @@ const BSCodeIcon = () => {
 						fill="#1F9CF0"
 					/>
 				</g>
-				<g style={{"mix-blend-mode":"overlay"}} opacity="0.25">
+				<g style={{ mixBlendMode: "overlay" }} opacity="0.25">
 					<path
 						fillRule="evenodd"
 						clipRule="evenodd"

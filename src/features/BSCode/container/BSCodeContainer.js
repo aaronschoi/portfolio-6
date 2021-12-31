@@ -11,8 +11,8 @@ const BSCodeContainer = ({ children }) => {
 			<div className="bscode-main-area">
 			<BSCodeIconBar />
 			<BSCodeExplorerBar />
-			</div>
 			{children}
+			</div>
 			</div>
 		</div>
 	);

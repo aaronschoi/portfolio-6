@@ -6,7 +6,7 @@ const NotChevron = ({icon}) => {
         case "wrench":
             return <WrenchButActuallyAKeyIcon />;
         default:
-            return <div className={`explorer-${icon.toLowerCase()}`}>{icon}</div>
+            return <div className={`bs-${icon.toLowerCase()}`}>{icon}</div>
     }
 }
 

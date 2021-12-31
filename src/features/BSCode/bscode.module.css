@@ -3,7 +3,7 @@
 	--color-lb-t : rgba(18, 146, 231, .5);
 	--color-lg-t : rgba(60, 60, 60, .5);
 	--color-lg : rgba(60, 60, 60);
-	--color-g: rgba(37, 37, 38);
+	--color-g: rgba(33, 33, 33);
 	--color-dg: rgba(80, 80, 80);
 }
 
@@ -15,4 +15,9 @@
 		  -ms-user-select: none;
 			  user-select: none;
 	font-size: 1.2rem;
+}
+
+.bs-js {
+	color: rgba(203, 203, 65, 1);
+	font-weight: bold;
 }
