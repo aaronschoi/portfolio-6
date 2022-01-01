@@ -1,4 +1,23 @@
 .bscode-font {
-    font-family: 'Courier Prime', monospace;
-    font-weight: bold;
+	font-family: "Courier Prime", monospace;
+	font-weight: bold;
+	padding: 30px;
+}
+
+.terminal-input-container {
+	display: flex;
+}
+
+.terminal-dollar {
+	padding-right: 10px;
+}
+
+.terminal-input-indicator {
+	height: 1em;
+	width: 8px;
+	border: 1px solid white;
+}
+
+.indicator-on {
+	background-color: white;
 }
