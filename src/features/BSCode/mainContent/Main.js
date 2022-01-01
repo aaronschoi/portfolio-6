@@ -6,8 +6,10 @@ import Terminal from "./terminal/Terminal";
 const Main = () => {
 	return (
 		<div className="bscode-main-container">
+			<div>
 			<TabBar />
 			<CodeEditor />
+			</div>
 			<Terminal />
 		</div>
 	);

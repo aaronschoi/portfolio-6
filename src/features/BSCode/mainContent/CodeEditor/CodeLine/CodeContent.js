@@ -4,7 +4,7 @@ import "./codeContent.module.css";
 import ColoredKeywords from "./EditorMain/Keyword/ColoredKeywords";
 import LineNumber from "./EditorMain/LineNumber/LineNumbers";
 
-const data = ["const hello = 'world'", "const aaron = 'poop'"];
+const data = ["const hello = 'world'", "const aaron = 'poop'", "{ } [ ] banana const Hello", "indent:2 const pop = 'lemonade'"];
 
 const CodeContent = () => {
 	return (
@@ -12,7 +12,7 @@ const CodeContent = () => {
 			{data.map((line, index) => (
 				<Fragment key={v4()}>
 					<LineNumber lineNumber={index + 1} />
-					<ColoredKeywords codeString={line} />
+					<ColoredKeywords codeString={line} id={`codeline-${index}`} />
 				</Fragment>
 			))}
 		</div>

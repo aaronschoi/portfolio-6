@@ -1,11 +1,44 @@
 .keyword-purple {
-    color: magenta;
+	color: magenta;
 }
 
 .keyword-green {
-    color: greenyellow;
+	color: greenyellow;
 }
 
 .keyword-cyan {
-    color: cyan;
+	color: cyan;
+}
+
+.keyword-blue {
+	color: blue;
+}
+
+.keyword-red {
+	color: orangered;
+}
+
+.keyword-orange {
+	color: orange;
+}
+
+.keyword-yellow {
+	color: yellow;
+}
+
+.indent {
+	width: 1em;
+}
+
+.coloredkeyword-container {
+	display: inline-flex;
+	cursor: text;
+}
+
+.coloredkeyword-container:focus {
+	background-color: var(--color-bg);
+}
+
+.space {
+	width: .4em;
 }

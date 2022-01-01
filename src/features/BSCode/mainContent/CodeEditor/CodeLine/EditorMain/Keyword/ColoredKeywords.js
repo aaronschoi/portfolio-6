@@ -6,9 +6,9 @@ const SpaceFilter = ({ string }) => {
 		case "[":
 		case "}":
 		case "{":
-			return <span></span>;
+			return <></>;
 		default:
-			return <span> </span>;
+			return <div className="space"></div>;
 	}
 };
 
@@ -40,7 +40,7 @@ const KeywordFinder = ({ string }) => {
 const dependencyFinder = (string) => {
 	switch (string) {
 		case "const":
-			return /A-Z/.test(string.charAt(0)) ? "blue" : "red";
+			return /^[A-Z]*$/.test(string.charAt(0)) ? "blue" : "red";
 		case "<":
 			return "red";
 		case "(":
@@ -53,11 +53,13 @@ const dependencyFinder = (string) => {
 const RecursiveKeywordFinder = ({ strArr, i = 0, dependent = "none" }) => {
 	if (strArr.length === i) return <></>;
 	const word = strArr[i];
+	if (word.includes("indent"))
+		return <RecursiveKeywordFinder strArr={strArr} i={i + 1} />;
 	const dependency = dependencyFinder(word);
 	if (dependent !== "none") {
 		return (
 			<>
-				<span className={`keyword-${dependency}`}>{word}</span>
+				<span className={`keyword-${dependent}`}>{word}</span>
 				<SpaceFilter string={word} />
 				<RecursiveKeywordFinder
 					strArr={strArr}
@@ -80,10 +82,37 @@ const RecursiveKeywordFinder = ({ strArr, i = 0, dependent = "none" }) => {
 	);
 };
 
-const ColoredKeywords = ({ codeString }) => (
-	<div>
-		<RecursiveKeywordFinder strArr={codeString.split(" ")} />
-	</div>
-);
+const Indent = ({ numberOfTimes }) => {
+	if (numberOfTimes === 1) return <div className="indent"></div>;
+	return (
+		<>
+			<div className="indent"></div>
+			<Indent numberOfTimes={numberOfTimes - 1} />
+		</>
+	);
+};
+
+const ColoredKeywords = ({ codeString, id }) => {
+	const splitString = codeString.split(" ");
+	const indentPresent = splitString[0].includes("indent:");
+
+	const focusOnClickHandler = (event) => {
+		document.getElementById(id).focus();
+	};
+
+	return (
+		<div
+			className="coloredkeyword-container"
+			tabIndex={0}
+			id={id}
+			onClick={focusOnClickHandler}
+		>
+			{indentPresent ? (
+				<Indent numberOfTimes={parseInt(splitString[0].split(":")[1])} />
+			) : null}
+			<RecursiveKeywordFinder strArr={splitString} />
+		</div>
+	);
+};
 
 export default ColoredKeywords;
