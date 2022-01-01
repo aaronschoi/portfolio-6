@@ -1,6 +1,8 @@
 .terminal-topbar-left-options,
 .terminal-topbar-right-options,
-.terminal-topbar-container {
+.terminal-topbar-container,
+.terminal-plus,
+.terminal-bash {
 	display: flex;
 }
 
@@ -39,4 +41,20 @@
 	align-items: center;
 	gap: 5px;
 	padding-right: 10px;
+}
+
+.terminal-bash {
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+
+.terminal-topbar-right-options > div {
+	border-radius: 10px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.terminal-topbar-right-options > div:hover {
+	background-color: var(--color-lg);
 }
