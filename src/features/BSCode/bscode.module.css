@@ -1,19 +1,21 @@
 :root {
-	--color-lb : rgba(18, 146, 231, .8);
-	--color-lb-t : rgba(18, 146, 231, .5);
-	--color-lg-t : rgba(60, 60, 60, .5);
-	--color-lg : rgba(60, 60, 60);
+	--color-lb: rgba(18, 146, 231, 0.8);
+	--color-lb-t: rgba(18, 146, 231, 0.5);
+	--color-lg-t: rgba(60, 60, 60, 0.5);
+	--color-lg: rgba(60, 60, 60);
 	--color-g: rgba(33, 33, 33);
 	--color-dg: rgba(80, 80, 80);
+	--color-less-bright-red: rgb(167, 51, 40);
+	--color-bright-red: rgba(229, 20, 0);
 }
 
 #bscode-container-area * {
-    -webkit-touch-callout: none;
-	  -webkit-user-select: none;
-	   -khtml-user-select: none;
-		 -moz-user-select: none;
-		  -ms-user-select: none;
-			  user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	font-size: 1.2rem;
 }
 

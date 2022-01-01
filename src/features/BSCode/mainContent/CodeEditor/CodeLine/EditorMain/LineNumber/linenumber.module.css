@@ -1,0 +1,21 @@
+.linenumber-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	cursor: pointer;
+}
+
+.reddot-off,
+.reddot-on {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+}
+
+.reddot-on {
+	background-color: var(--color-bright-red);
+}
+
+.reddot-off:hover {
+	background-color: var(--color-less-bright-red);
+}
