@@ -1,14 +1,14 @@
 import "./main.module.css";
-import ColoredKeywords from "./CodeEditor/CodeLine/EditorMain/Keyword/ColoredKeywords";
 import TabBar from "./TabBar/TabBar";
 import CodeEditor from "./CodeEditor/CodeEditorContainer";
+import Terminal from "./terminal/Terminal";
 
 const Main = () => {
 	return (
 		<div className="bscode-main-container">
 			<TabBar />
 			<CodeEditor />
-			{/*terminal*/}
+			<Terminal />
 		</div>
 	);
 };
