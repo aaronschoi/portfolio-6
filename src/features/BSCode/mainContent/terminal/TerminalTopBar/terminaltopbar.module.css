@@ -1,0 +1,42 @@
+.terminal-topbar-left-options,
+.terminal-topbar-right-options,
+.terminal-topbar-container {
+	display: flex;
+}
+
+.terminal-topbar-container {
+	justify-content: space-between;
+}
+
+.terminal-topbar-left-options {
+	gap: 30px;
+	padding-left: 30px;
+	height: 3em;
+}
+
+.terminal-topbar-left-option,
+.terminal-topbar-picked {
+	border-bottom: 1px solid var(--color-g);
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: var(--color-dg);
+}
+
+.terminal-topbar-left-option:hover,
+.terminal-topbar-picked {
+	border-bottom: 1px solid white;
+	color: white;
+}
+
+.terminal-topbar-right-options {
+	color: white;
+	height: 3em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	padding-right: 10px;
+}
