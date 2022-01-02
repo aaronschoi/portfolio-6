@@ -17,8 +17,7 @@ export function App() {
 		<>
 			{/* this will be the container for the whole page */}
 			<div className="App">
-				{/* {cwindow === windows.DESKTOP ? <Desktop /> : cwindow === windows.BSCODE ? <BSCode /> : <Loading />} */}
-				<LinkedIn />
+				{cwindow === windows.DESKTOP ? <Desktop /> : cwindow === windows.BSCODE ? <BSCode /> : <Loading />}
 			</div>
 		</>
 	);
