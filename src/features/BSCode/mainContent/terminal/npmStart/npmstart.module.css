@@ -1,0 +1,15 @@
+.npm-spacer {
+    height: 1em;
+}
+
+.npm-limegreen {
+    color: limegreen;
+}
+
+.npm-version {
+    color: rgba( 50, 205, 50, .5);
+}
+
+.npm-cyan {
+    color: rgba( 0, 255, 255, .9 )
+}

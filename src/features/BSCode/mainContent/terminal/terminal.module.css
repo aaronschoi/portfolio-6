@@ -2,3 +2,9 @@
     border-top: 1px solid var(--color-lg);
     min-height: 30vh;
 }
+
+.bscode-font {
+	font-family: "Courier Prime", monospace;
+	font-weight: bold;
+	padding: 30px;
+}

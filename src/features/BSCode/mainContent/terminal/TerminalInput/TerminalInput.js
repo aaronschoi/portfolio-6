@@ -3,6 +3,10 @@ import "./terminalInput.module.css";
 const TerminalInput = () => {
 	const [indicator, setIndicator] = React.useState(false);
 
+	const pressEnterHandler = (event) => {
+
+	}
+
 	return (
 		<div className="bscode-font">
 			<div className="new-git-line-title">
@@ -22,6 +26,7 @@ const TerminalInput = () => {
 				tabIndex={0}
 				onClick={() => setIndicator(true)}
 				onBlur={() => setIndicator(false)}
+				onKeyPress={pressEnterHandler}
 			>
 				<div className="terminal-dollar">$</div>
 				<div>npm start</div>

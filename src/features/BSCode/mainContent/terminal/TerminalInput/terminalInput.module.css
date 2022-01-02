@@ -1,9 +1,3 @@
-.bscode-font {
-	font-family: "Courier Prime", monospace;
-	font-weight: bold;
-	padding: 30px;
-}
-
 .terminal-input-container {
 	display: flex;
 }
