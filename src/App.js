@@ -14,7 +14,6 @@ export function App() {
 
 	return (
 		<>
-			{/* this will be the container for the whole page */}
 			<div className="App">
 				{cwindow === windows.DESKTOP ? <Desktop /> : cwindow === windows.BSCODE ? <BSCode /> : <Loading />}
 			</div>
