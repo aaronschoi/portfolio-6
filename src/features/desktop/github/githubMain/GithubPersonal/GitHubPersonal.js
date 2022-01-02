@@ -5,7 +5,7 @@ const GitHubPersonal = () => {
 		<div>
 			<img
 				className="githubpersonal-icon"
-				src="http://localhost:8000/www/headshot.jpg"
+				src="./www/headshot.jpg"
 			/>
 		</div>
 	);

@@ -107,7 +107,7 @@ const BasicApplication = ({ className, children, title, target }) => {
 						<div className="basic-application-icon-container">
 							<img
 								className="basic-application-icon"
-								src={`http://localhost:8000/www/${target}.png`}
+								src={`./www/${target}.png`}
 							/>
 						</div>
 					</div>
