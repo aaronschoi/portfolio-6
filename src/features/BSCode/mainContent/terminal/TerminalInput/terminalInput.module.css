@@ -21,3 +21,7 @@
 .indicator-on {
 	background-color: white;
 }
+
+.terminal-input-container:focus {
+	outline: none;
+}

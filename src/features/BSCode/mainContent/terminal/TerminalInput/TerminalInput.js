@@ -13,7 +13,7 @@ const TerminalInput = () => {
 					MINGW64
 				</span>
 				<span className="new-git-line-path new-git-line-font">
-					c/extraPretentiousPortfolios/portfolio-6/frontend
+					c/extraPretentiousPortfolios/portfolio-6/frontend/src
 				</span>
 				<span className="new-git-line-branch new-git-line-font">(main)</span>
 			</div>
