@@ -9,10 +9,6 @@ const initialWindowStates = {
 		minimized: false,
 		open: false
 	},
-	resume: {
-		minimized: false,
-		open: false
-	},
 	gitcrash: {
 		minimized: false,
 		open: false
@@ -56,6 +52,24 @@ export const close = (winStr) => {
 		...state,
 		[winStr] : {
 			...state[winStr],
+			open: false
+		}
+	}))
+}
+
+export const reset = () => {
+	windowStates.set(state => ({
+		...state,
+		linkedin: {
+			minimized: false,
+			open: false
+		},
+		github: {
+			minimized: false,
+			open: false
+		},
+		gitcrash: {
+			minimized: false,
 			open: false
 		}
 	}))

@@ -1,5 +1,6 @@
 import React from "react";
 import { changeToLoading } from "../../../../../store/currentWindowStore";
+import { reset } from "../../../../../store/windowStatesStore";
 import "./npmstart.module.css";
 
 const NPMStart = () => {
@@ -7,6 +8,7 @@ const NPMStart = () => {
 	React.useEffect(() => {
 		const timeout = setTimeout(() => {
 			changeToLoading();
+			reset();
 		}, 5000)
 		return () => clearTimeout(timeout)
 	}, [])
