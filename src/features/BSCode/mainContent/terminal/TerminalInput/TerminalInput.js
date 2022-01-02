@@ -1,10 +1,13 @@
+import { npmStart } from "../../../../../store/terminalStateStore";
 import "./terminalInput.module.css";
 
 const TerminalInput = () => {
 	const [indicator, setIndicator] = React.useState(false);
 
 	const pressEnterHandler = (event) => {
-
+		if(event.keyCode === 13) {
+			npmStart();
+		}
 	}
 
 	return (
@@ -26,7 +29,7 @@ const TerminalInput = () => {
 				tabIndex={0}
 				onClick={() => setIndicator(true)}
 				onBlur={() => setIndicator(false)}
-				onKeyPress={pressEnterHandler}
+				onKeyUp={pressEnterHandler}
 			>
 				<div className="terminal-dollar">$</div>
 				<div>npm start</div>

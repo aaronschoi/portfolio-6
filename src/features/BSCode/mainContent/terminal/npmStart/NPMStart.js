@@ -1,6 +1,16 @@
+import React from "react";
+import { changeToLoading } from "../../../../../store/currentWindowStore";
 import "./npmstart.module.css";
 
 const NPMStart = () => {
+
+	React.useEffect(() => {
+		const timeout = setTimeout(() => {
+			changeToLoading();
+		}, 5000)
+		return () => clearTimeout(timeout)
+	}, [])
+
 	return (
 		<div className="bscode-font">
 			<div>
