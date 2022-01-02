@@ -51,7 +51,7 @@ const MinIcon = ({ icon, value }) => {
 			<div value={value} className="prevent-select">
 				<img
 					className="minicon-icon"
-					src={`http://localhost:8000/www/${icon}.png`}
+					src={`./www/${icon}.png`}
 				/>
 			</div>
 			<div className="minicon-bar">
