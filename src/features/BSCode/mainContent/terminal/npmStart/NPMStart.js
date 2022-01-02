@@ -5,15 +5,14 @@ import { reset } from "../../../../../store/windowStatesStore";
 import "./npmstart.module.css";
 
 const NPMStart = () => {
-
 	React.useEffect(() => {
+		goAroundAgain();
+		reset();
 		const timeout = setTimeout(() => {
 			changeToLoading();
-			goAroundAgain();
-			reset();
-		}, 5000)
-		return () => clearTimeout(timeout)
-	}, [])
+		}, 5000);
+		return () => clearTimeout(timeout);
+	}, []);
 
 	return (
 		<div className="bscode-font">
