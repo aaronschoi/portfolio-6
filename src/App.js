@@ -1,7 +1,6 @@
 import "./App.css";
 import BSCode from "./features/BSCode/BSCode";
 import Desktop from "./features/desktop/Desktop";
-import LinkedIn from "./features/desktop/linkedin/LinkedIn";
 import Loading from "./features/loadingScreen/Loading";
 import { currentWindow, windows } from "./store/currentWindowStore";
 
