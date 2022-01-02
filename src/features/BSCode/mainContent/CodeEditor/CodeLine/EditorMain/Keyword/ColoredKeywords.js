@@ -1,14 +1,17 @@
 import "./keyword.module.css";
 
-const SpaceFilter = ({ string }) => {
+const SpaceFilter = ({ string, dependent }) => {
 	switch (string) {
 		case "]":
-		case "[":
 		case "}":
 		case "{":
+		case "<":
+		case "/":
+		case "props":
+		case "...":
 			return <></>;
 		default:
-			return <div className="space"></div>;
+			return dependent === "element" ? <></> : <div className="space"></div>;
 	}
 };
 
@@ -17,6 +20,7 @@ const KeywordFinder = ({ string }) => {
 		case "const":
 		case "return":
 		case "=>":
+		case "props":
 			return <span className="keyword-purple">{string}</span>;
 		case "=":
 		case ":":
@@ -24,6 +28,7 @@ const KeywordFinder = ({ string }) => {
 		case "<":
 		case ">":
 		case ",":
+		case "/":
 			return <span className="keyword-cyan">{string}</span>;
 		case "(":
 		case ")":
@@ -32,6 +37,8 @@ const KeywordFinder = ({ string }) => {
 		case "[":
 		case "]":
 			return <span className="keyword-yellow">{string}</span>;
+		case "...":
+			return <span className="keyword-white">{string}</span>
 		default:
 			return <span className="keyword-green">{string}</span>;
 	}
@@ -42,7 +49,7 @@ const dependencyFinder = (string) => {
 		case "const":
 			return /^[A-Z]*$/.test(string.charAt(0)) ? "blue" : "red";
 		case "<":
-			return "red";
+			return "yellow";
 		case "(":
 			return "orange";
 		default:
@@ -53,14 +60,14 @@ const dependencyFinder = (string) => {
 const RecursiveKeywordFinder = ({ strArr, i = 0, dependent = "none" }) => {
 	if (strArr.length === i) return <></>;
 	const word = strArr[i];
-	if (word.includes("indent"))
+	if (word.includes("indent:"))
 		return <RecursiveKeywordFinder strArr={strArr} i={i + 1} />;
 	const dependency = dependencyFinder(word);
 	if (dependent !== "none") {
 		return (
 			<>
 				<span className={`keyword-${dependent}`}>{word}</span>
-				<SpaceFilter string={word} />
+				<SpaceFilter dependent={dependent} string={word} />
 				<RecursiveKeywordFinder
 					strArr={strArr}
 					i={i + 1}
@@ -72,7 +79,7 @@ const RecursiveKeywordFinder = ({ strArr, i = 0, dependent = "none" }) => {
 	return (
 		<>
 			<KeywordFinder string={word} />
-			<SpaceFilter string={word} />
+			<SpaceFilter dependent={dependent} string={word} />
 			<RecursiveKeywordFinder
 				strArr={strArr}
 				i={i + 1}

@@ -1,13 +1,13 @@
 .keyword-purple {
-	color: magenta;
+	color: rgb(201, 136, 234);
 }
 
 .keyword-green {
-	color: greenyellow;
+	color: rgb(195, 232, 141);
 }
 
 .keyword-cyan {
-	color: cyan;
+	color: rgb(128, 216, 255);
 }
 
 .keyword-blue {
@@ -15,7 +15,7 @@
 }
 
 .keyword-red {
-	color: orangered;
+	color: rgb(245, 115, 89);
 }
 
 .keyword-orange {
@@ -23,7 +23,7 @@
 }
 
 .keyword-yellow {
-	color: yellow;
+	color: gold;
 }
 
 .indent {

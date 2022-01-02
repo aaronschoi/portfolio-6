@@ -4,7 +4,25 @@ import "./codeContent.module.css";
 import ColoredKeywords from "./EditorMain/Keyword/ColoredKeywords";
 import LineNumber from "./EditorMain/LineNumber/LineNumbers";
 
-const data = ["const hello = 'world'", "const aaron = 'poop'", "{ } [ ] banana const Hello", "indent:2 const pop = 'lemonade'"];
+const data = [
+	"const App = () => {",
+	"indent:1 const aaronchoi = {",
+	"indent:2 'interests' : [ 'code' , 'aquaponics' , 'web dev' ] ,",
+	"indent:2 'location' : 'Las Vegas, Nevada' ,",
+	"indent:2 'residentStatus' : 'U.S. Citizen' ,",
+	"indent:2 'email' : 'connect@aaronschoi.com' ,",
+	"indent:2 'twitter' : '@AarSaChoi' ,",
+	"indent:1 } ;",
+	"",
+	"indent:1 const specialThanks = {",
+	"indent:2 'Huy' : 'visionary artist and fullstack developer' ,",
+	"indent:2 'Zaydek' : 'creator of retro and seasoned web dev' ,",
+	"indent:2 'feathericons.com : 'icons used in this portfolio'",
+	"indent:1 } ;",
+	"",
+	"indent:1 return < Portfolio props = { ... aaronchoi ,  ... specialThanks } / >",
+	"} ;"
+];
 
 const CodeContent = () => {
 	return (
