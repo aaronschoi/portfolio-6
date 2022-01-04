@@ -6,8 +6,8 @@
 	justify-content: space-between;
 }
 
-@media only screen and (max-width: 1200px){
-    .bscode-main-container {
-		width: max-content;
+@media only screen and (max-width: 1200px) {
+	.bscode-main-container {
+		min-width: max-content;
 	}
 }
