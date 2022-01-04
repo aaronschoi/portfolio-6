@@ -57,12 +57,33 @@ const dependencyFinder = (string) => {
 	}
 };
 
+const LinkFinder = ({linkString}) => {
+	const linkArr = linkString.split("&&");
+	const link = linkArr[1];
+	const content = linkArr[2];
+	console.log(link)
+	return <a href={link} target="_blank">{content}</a>
+}
+
 const RecursiveKeywordFinder = ({ strArr, i = 0, dependent = "none" }) => {
 	if (strArr.length === i) return <></>;
 	const word = strArr[i];
 	if (word.includes("indent:"))
 		return <RecursiveKeywordFinder strArr={strArr} i={i + 1} />;
 	const dependency = dependencyFinder(word);
+	if(word.includes("link&&")) {
+		return (
+			<>
+				<LinkFinder linkString={word} />
+				<SpaceFilter dependent={dependent} string={word} />
+				<RecursiveKeywordFinder
+					strArr={strArr}
+					i={i + 1}
+					dependent={dependency}
+				/>
+			</>
+		);
+	}
 	if (dependent !== "none") {
 		return (
 			<>

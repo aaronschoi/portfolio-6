@@ -1,3 +1,15 @@
+:root {
+	--color-lb: rgba(18, 146, 231, 0.8);
+	--color-lb-t: rgba(18, 146, 231, 0.5);
+	--color-lg-t: rgba(60, 60, 60, 0.5);
+	--color-lg: rgba(60, 60, 60);
+	--color-g: rgba(33, 33, 33);
+	--color-dg: rgba(80, 80, 80);
+	--color-bg: rgba(23, 23, 23);
+	--color-less-bright-red: rgb(167, 51, 40);
+	--color-bright-red: rgba(229, 20, 0);
+}
+
 .App {
 	height: 100vh;
 	width: 100vw;
@@ -7,4 +19,12 @@
 *::-webkit-scrollbar {
 	display: none;
 	-ms-overflow-style: none;
+}
+
+@media only screen and (max-width: 1200px) {
+	.App {
+		background-color: var(--color-g);
+		color: white;
+		overflow-x: scroll;
+	}
 }

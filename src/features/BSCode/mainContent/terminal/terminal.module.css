@@ -1,6 +1,7 @@
 .bscode-terminal-container {
-    border-top: 1px solid var(--color-lg);
-    min-height: 30vh;
+	border-top: 1px solid var(--color-lg);
+	min-height: 30vh;
+	width: 100%;
 }
 
 .bscode-font {
